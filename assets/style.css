@@ -1,0 +1,14 @@
+@font-face {
+    font-family: Agrandir-Tight;
+    src: url('./Agrandir-Tight.ttf');
+}
+@font-face {
+    font-family: Agrandir-GrandLight;
+    src: url('./Agrandir-GrandLight.ttf');
+}
+h1{
+    font-family:Agrandir-GrandLight;
+}
+h2{
+    font-family:Agrandir-Tight;
+}
