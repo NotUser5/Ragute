@@ -32,19 +32,17 @@
             <a id="test" class="nav-link active" aria-current="page" href="./index.php">Home</a>
           </li>
           <li class="nav-item">
-            <a id="test2" class="nav-link active" aria-current="page" href="#">Lanches</a>
+            <a id="test" class="nav-link active" aria-current="page" href="#">Lanches</a>
           </li>
           <li class="nav-item">
-            <a id="test3" class="nav-link active" aria-current="page" href="#">Porções</a>
+            <a id="test" class="nav-link active" aria-current="page" href="#">Porções</a>
           </li>
           <li class="nav-item">
-            <a id="test4" class="nav-link active" aria-current="page" href="#">Bebidas</a>
+            <a id="test" class="nav-link active" aria-current="page" href="#">Bebidas</a>
           </li>
           <li class="nav-item">
-            <a id="test5" class="nav-link active" aria-current="page" href="#">Sobre</a>
+            <a id="test" class="nav-link active" aria-current="page" href="#">Sobre</a>
           </li>
-
-
 
         </ul>
 

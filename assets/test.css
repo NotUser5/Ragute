@@ -3,94 +3,19 @@
 }
 
 #test {
-    position: absolute;
-    width: 57.48px;
-    height: 17px;
-    left: 382px;
-    top: 21px;
-
+    text-align: center;
     font-family: 'Inter';
     font-style: normal;
     font-weight: 400;
     font-size: 20px;
     line-height: 16px;
+    margin-left: 160px;
 
     /* or 80% */
 
     color: #FF611D;
 }
 
-#test2{
-    position: absolute;
-    width: 136.67px;
-    height: 16.15px;
-    left: 604.11px;
-    top: 21.24px;
-
-    font-family: 'Inter';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 20px;
-    line-height: 16px;
-
-    /* or 80% */
-
-    color: #FF611D;
-}
-
-#test3{
-    position: absolute;
-    width: 131.55px;
-    height: 16.15px;
-    left: 907.22px;
-    top: 21.24px;
-    
-    font-family: 'Inter';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 20px;
-    line-height: 16px;
-    
-    /* or 80% */
-    
-    color: #FF611D;        
-}
-
-#test4{
-    position: absolute;
-    width: 129.84px;
-    height: 16.15px;
-    left: 1211.62px;
-    top: 21px;
-    
-    font-family: 'Inter';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 20px;
-    line-height: 16px;
-    
-    /* or 80% */
-    
-    color: #FF611D;
-}
-
-#test5{
-    position: absolute;
-    width: 57.48px;
-    height: 16px;
-    left: 1472px;
-    top: 24px;
-    
-    font-family: 'Inter';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 20px;
-    line-height: 16px;
-    
-    /* identical to box height, or 80% */
-    
-    color: #FF611D;
-}
 
 footer{
     position: absolute;
