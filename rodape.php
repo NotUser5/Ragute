@@ -13,7 +13,11 @@
                     <p>Email: email.@email.com.br</p>
                 </div>
                 <div class="col-3 ">
-
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
                     <p class="tx_sl text-end">© Copyright <?php echo date('Y') ?>  Ragute Team</p>
                 </div>
                 <div class="col-1"></div>
