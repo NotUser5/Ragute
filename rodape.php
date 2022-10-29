@@ -1,20 +1,23 @@
-    </div><!-- Fechamento da div container -->
-    <script src="./assets/bootstrap.bundle.min.js"></script>
-    <link rel="stylesheet" href="./test.css">
-    <footer>
-        <a class="navbar-brand" href="#">
-        <img src="./assets/RaguteFooter2.png" alt="Bootstrap" id="rfooter">
-        </a>
-        
-        <nav class="navbar navbar-expand-lg" id="contato">
-            <p>
-                Contato</br>
-                Email: email.@email.com.br</br>
-                Telefone: (00) 4002-8922</br>
-                Whatsapp: (00) 00000-0000
-            </p>
-        </nav>
+    </div>
+        <footer>
+            <div class="row">
+                <div class="col-1"></div>
+                <div class="col-3">
+                    <img src="./assets/RaguteFooter.png" width="152px" height="152px" >
+                    <script src="./assets/bootstrap.bundle.min.js"></script>
+                </div>
+                <div class="col-4 text-center">
+                    <p>Contato</p>
+                    <p>Telefone: (00) 4002-8922</p>
+                    <p>Whatsapp: (00) 00000-0000</p>
+                    <p>Email: email.@email.com.br</p>
+                </div>
+                <div class="col-3 ">
 
-    </footer>
-</body>
+                    <p class="tx_sl text-end">© Copyright <?php echo date('Y') ?>  Ragute Team</p>
+                </div>
+                <div class="col-1"></div>
+            </div>
+        </footer>
+    </body>
 </html>
