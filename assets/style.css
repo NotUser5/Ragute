@@ -12,7 +12,6 @@ h1{
 h2{
     font-family:Agrandir-Tight;
 }
-
 #header{
   background: #171717;
   color: #ff611d;
@@ -36,4 +35,14 @@ h2{
 
 #produtos{
   margin-top: 6%;
+}
+
+footer{
+  color: #FF611D; 
+  background-color: #171717;
+}
+
+.tx_sl{
+   font-size: 10px;
+   
 }
