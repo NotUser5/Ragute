@@ -1,7 +1,7 @@
     </div><!-- Fechamento da div container -->
     <script src="./assets/bootstrap.bundle.min.js"></script>
-    <link rel="stylesheet" href="./test.css">
-    <footer>
+    <!-- <link rel="stylesheet" href="./test.css"> -->
+    <div class="row">
         <a class="navbar-brand" href="#">
         <img src="./assets/RaguteFooter2.png" alt="Bootstrap" id="rfooter">
         </a>
@@ -15,6 +15,6 @@
             </p>
         </nav>
 
-    </footer>
+    </div>
 </body>
 </html>
