@@ -12,7 +12,7 @@
 
 <body>
 <nav id="header" class="navbar navbar-expand-lg">
-        <div class="container-fluid">
+        <div class="container-fluid d-flex justify-content-around">
             <a id="logo" class="navbar-brand" href="./index.php"><img src="./assets/ragute2.png" alt="Bootstrap"
                     width="220" height="50"></a>
 
