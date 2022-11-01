@@ -6,9 +6,9 @@
     font-family: Agrandir-GrandLight;
     src: url('./Agrandir-GrandLight.ttf');
 }
-h1{
+/* h1{
     font-family:Agrandir-GrandLight;
-}
+} */
 /* h2{
     font-family:Agrandir-Tight;
 } */
@@ -16,10 +16,19 @@ h1{
   background: #171717;
   color: #ff611d;
 }
+#menu{
+  width: 100%;
+}
+
+.container {
+  background-color: #dddddd;
+  height: 100%;
+  box-shadow: 0px 0px 75px;
+  padding-top: 74px;
+}
 
 #UI{
   color: #ff611d;
-  margin-left: 15vh;
 }
 
 #dropdown{
@@ -43,9 +52,17 @@ footer{
   color: #FF611D; 
   background-color: #171717;
   width: 100%;
+  padding-top: .5rem;
 }
 
 .tx_sl{
    font-size: 10px;
-   
+}
+
+#copy{
+  margin-top: 8rem;
+}
+
+#bread{
+  margin-left: 2%;
 }

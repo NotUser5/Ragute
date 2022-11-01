@@ -1,7 +1,8 @@
 </div>
 
 </body>
-        <footer class="content-fluid">
+        <footer>
+        <div class="container-fluid">
             <div class="row">
                 <div class="col-md-1 col-sm-12"></div>
                 <div class="col-md-3 col-sm-12 text-center">
@@ -15,16 +16,12 @@
                     <p>Email: email.@email.com.br</p>
                 </div>
                 <div class="col-md-3 col-sm-12">
-                    <br>
-                    <br>
-                    <br>
-                    <br>
-                    <br>
 
-                    <p class="tx_sl text-end">&copy; Copyright <?php echo date('Y') ?>  Ragute Team</p>
+                    <p class="tx_sl text-end align-text-bottom" id="copy">&copy; Copyright <?php echo date('Y') ?>  Ragute Team</p>
 
                 </div>
                 <div class="col-md-1 col-sm-12"></div>
             </div>
+        </div>
         </footer>
 </html>
