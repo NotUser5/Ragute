@@ -6,18 +6,26 @@
     font-family: Agrandir-GrandLight;
     src: url('./Agrandir-GrandLight.ttf');
 }
+
 /* h1{
     font-family:Agrandir-GrandLight;
 } */
 /* h2{
     font-family:Agrandir-Tight;
 } */
+
 #header{
   background: #171717;
   color: #ff611d;
 }
+
 #menu{
-  width: 100%;
+  width: 85%;
+}
+
+h6{
+  color: #ff611d;
+  text-align: center;
 }
 
 .container {
