@@ -63,13 +63,17 @@ footer{
   padding-top: .5rem;
 }
 
+#cont{
+  font-size: 12px;
+}
+
 .tx_sl{
    font-size: 10px;
 }
 
-#copy{
-  margin-top: 8rem;
-}
+/* #copy{
+  margin-top: 7.5rem;
+} */
 
 #bread{
   margin-left: 2%;
