@@ -1,3 +1,3 @@
-<?php include "./cabacalho.php"; ?>
+<?php include "./cabecalho.php"; ?>
 
 <?php include "./rodape.php"; ?>

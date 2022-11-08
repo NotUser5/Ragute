@@ -40,7 +40,7 @@
                         <a id="UI" class="nav-link active" aria-current="page" href="#">Bebidas</a>
                     </li>
                     <li class="nav-item">
-                        <a id="UI" class="nav-link active" aria-current="page" href="#">Sobre</a>
+                        <a id="UI" class="nav-link active" aria-current="page" href="./sobre.php">Sobre</a>
                     </li>
                 </ul>
 

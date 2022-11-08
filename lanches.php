@@ -1,6 +1,6 @@
 <?php 
 $titulo = "Lanches";
-include "./cabacalho.php"; 
+include "./cabecalho.php"; 
 ?>
 
 <div class="container">
