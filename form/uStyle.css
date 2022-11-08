@@ -20,7 +20,8 @@
 }
 
 #menu{
-  width: 85%;
+  width: 20%;
+
 }
 
 h6{
@@ -28,12 +29,6 @@ h6{
   text-align: center;
 }
 
-.container {
-  background-color: #dddddd;
-  height: 100%;
-  box-shadow: 0px 0px 75px;
-  padding-top: 74px;
-}
 
 #UI{
   color: #ff611d;
@@ -82,4 +77,12 @@ footer{
 #cadastro{
   margin-top: 5%;
   margin-bottom: 5%;
+}
+
+#cartao{
+  margin: 10%;
+}
+
+#campo{
+  text-align: center;
 }
