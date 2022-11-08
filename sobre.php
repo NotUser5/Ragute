@@ -1,5 +1,5 @@
 <?php  $titulo="Sobre a Empresa"; include "./cabecalho.php"; ?>
-<div class="container" id="bodyContainer">
+<div class="container">
 
 
     <nav style="--bs-breadcrumb-divider: url(&#34;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8'%3E%3Cpath d='M2.5 0L1 1.5 3.5 4 1 6.5 2.5 8l4-4-4-4z' fill='currentColor'/%3E%3C/svg%3E&#34;);" aria-label="breadcrumb">
@@ -11,11 +11,11 @@
 
 
     <center>
-        <div class="container">
+        <div>
             <h1><strong>A EMPRESA</strong></h1>
             <hr>
     </center>
-    <div class="container">
+    <div>
         <p style="font-family: 'Varela Round', sans-serif;" align="justify">
             A <strong>Ragute</strong> foi fundada em 2022 na cidade de Ribeirão Preto, localizada no estado de São Paulo. Tem atuação no ramo alimentício e é composta pelos Co Fundadores Carlos Eduardo Torrichelli de Souza Pinto, Carlos Folgado Emanuel de Oliveira Cândido, Isabela Furriel Palone, João Marcos Torrichelli Mattos, Johnny Rodrigues Evangelista e Lucas Sgarbi Aravéchia.<br><br>
             <strong>Missão</strong>: Fornecer agilidade para nossos clientes ao escolher suas refeições. <br>
@@ -39,7 +39,7 @@
 
         </div>
 
-        <div class="container" style="margin-top:25px;">
+        <div style="margin-top:25px;">
             <div class="row">
                 <div class="footer-col col-md-12">
                     <center>
