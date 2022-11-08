@@ -6,7 +6,9 @@
     font-family: Agrandir-GrandLight;
     src: url('./Agrandir-GrandLight.ttf');
 }
-
+html,body{
+  background-color: #c0c0c0;
+}
 /* h1{
     font-family:Agrandir-GrandLight;
 } */
@@ -28,7 +30,7 @@ h6{
   text-align: center;
 }
 
-.container {
+#bodyContainer {
   background-color: #dddddd;
   height: 100%;
   box-shadow: 0px 0px 75px;

@@ -1,5 +1,5 @@
 <?php  $titulo="Sobre a Empresa"; include "./cabecalho.php"; ?>
-<div class="container-xl py-4 py-xl-5">
+<div class="container" id="bodyContainer">
 
 
     <nav style="--bs-breadcrumb-divider: url(&#34;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8'%3E%3Cpath d='M2.5 0L1 1.5 3.5 4 1 6.5 2.5 8l4-4-4-4z' fill='currentColor'/%3E%3C/svg%3E&#34;);" aria-label="breadcrumb">
@@ -31,7 +31,7 @@
         <div class="row">
             <div class="col-md-12">
                 <div class="thumbnail">
-                    <center><img src="./assets/logo_ragute.png" class="img-responsive" style="width:500px; height:500px;" alt="imagem"></center>
+                    <center><img src="./assets/ragute.png" class="img-responsive" style="width:auto; height:auto;" alt="imagem"></center>
                 </div>
             </div>
 
