@@ -6,12 +6,6 @@
     font-family: Agrandir-GrandLight;
     src: url('./Agrandir-GrandLight.ttf');
 }
-h1{
-    font-family:Agrandir-GrandLight;
-}
-h2{
-    font-family:Agrandir-Tight;
-}
 #header{
   background: #171717;
   color: #ff611d;
@@ -45,4 +39,11 @@ footer{
 .tx_sl{
    font-size: 10px;
    
+}
+#top-card{
+  margin: 15%;
+  
+}
+#bg{
+  background-color: #c0c0c0;
 }
