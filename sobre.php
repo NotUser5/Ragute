@@ -1,4 +1,4 @@
-<?php include "./cabecalho.php"; ?>
+<?php  $titulo="Sobre a Empresa"; include "./cabecalho.php"; ?>
 <div class="container-xl py-4 py-xl-5">
 
 
