@@ -1,4 +1,4 @@
-<?php  $titulo="Sobre a Empresa"; include "./cabecalho.php"; ?>
+<?php  $titulo="Sobre a Empresa"; include "../cabecalho/cabecalho.php"; ?>
 <div class="container">
 
 
@@ -31,7 +31,7 @@
         <div class="row">
             <div class="col-md-12">
                 <div class="thumbnail">
-                    <center><img src="./assets/ragute.png" class="img-responsive" style="width:auto; height:auto;" alt="imagem"></center>
+                    <center><img src="../../assets/img/ragute.png" class="img-responsive" style="width:auto; height:auto;" alt="imagem"></center>
                 </div>
             </div>
 
@@ -53,9 +53,11 @@
 
                             <center>
                                 <h3>Contato</h3>
-                                <p style="font-size:18px">Telefone</p>
+                                <p style="font-size:18px">Telefone/Whatsapp</p>
                             </center>
                             <p style="font-size:18px"><a href="tel:01632025980">(16)3202-5980</a></p>
+                            <p style="font-size:18px"><a href="http://wa.me/5516996008745">(16)99600-8745</a></p>
+
 
                             <center>
                                 <p style="font-size:18px">E-mail</p>
@@ -89,18 +91,12 @@
 
 
                             </li>
-                            <br>
+
                         </ul>
-
-
 
                     </center>
 
                 </div>
-
-                <br>
-
-                <center><a href="index.php" class="btn btn-danger btn-lg" role="button">Voltar</a></center>
 
             </div>
 
@@ -110,4 +106,4 @@
 
 
 </div>
-<?php include "./rodape.php"; ?>
+<?php include "../rodape/rodape.php"; ?>

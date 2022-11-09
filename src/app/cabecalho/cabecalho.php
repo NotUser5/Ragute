@@ -6,8 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title><?php echo $titulo; ?></title>
-    <link rel="stylesheet" href="./assets/bootstrap.min.css" />
-    <link rel="stylesheet" href="./assets/style.css">
+    <link rel="stylesheet" href="../../style/bootstrap.min.css" />
+    <link rel="stylesheet" href="../../style/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
@@ -15,8 +15,8 @@
 <nav id="header" class="navbar navbar-expand-lg d-flex justify-content-around">
 
         <div class="container-fluid">
-            <a id="logo" class="navbar-brand" href="./index.php">
-                <img src="./assets/ragute2.png" alt="Bootstrap" width="220" height="50">
+            <a id="logo" class="navbar-brand" href="../home/index.php">
+                <img src="../../assets/img/ragute2.png" alt="Bootstrap" width="220" height="50">
             </a>
 
 
@@ -29,10 +29,10 @@
             <div class="collapse navbar-collapse " id="navbarNavDropdown">
                 <ul id="menu" class="navbar-nav me-auto mb-2 mb-lg-0 d-flex justify-content-around" >
                     <li class="nav-item">
-                        <a id="UI" class="nav-link active" aria-current="page" href="./index.php">Home</a>
+                        <a id="UI" class="nav-link active" aria-current="page" href="../home/index.php">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a id="UI" class="nav-link active" aria-current="page" href="./lanches.php">Lanches</a>
+                        <a id="UI" class="nav-link active" aria-current="page" href="../lanches/lanches.php">Lanches</a>
                     </li>
                     <li class="nav-item">
                         <a id="UI" class="nav-link active" aria-current="page" href="#">Porções</a>
@@ -41,7 +41,7 @@
                         <a id="UI" class="nav-link active" aria-current="page" href="#">Bebidas</a>
                     </li>
                     <li class="nav-item">
-                        <a id="UI" class="nav-link active" aria-current="page" href="./sobre.php">Sobre</a>
+                        <a id="UI" class="nav-link active" aria-current="page" href="../sobre/sobre.php">Sobre</a>
                     </li>
                 </ul>
 
