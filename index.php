@@ -1,0 +1,1 @@
+<script type="text/javascript">location.href = '/Ragute/src/app/home/home.php';</script>
