@@ -1,0 +1,259 @@
+@font-face {
+  font-family: Agrandir-Tight;
+  src: url('./Agrandir-Tight.ttf');
+}
+
+@font-face {
+  font-family: Agrandir-GrandLight;
+  src: url('./Agrandir-GrandLight.ttf');
+}
+
+html, body {
+  background: #c0c0c0;
+  height: 100%;
+}
+
+/* h1{
+    font-family:Agrandir-GrandLight;
+} */
+/* h2{
+    font-family:Agrandir-Tight;
+} */
+
+#header {
+  background: #171717;
+  color: #ff611d;
+}
+
+#menu {
+  width: 85%;
+}
+
+h6 {
+  color: #ff611d;
+  text-align: center;
+}
+
+.container {
+  background-color: #dddddd;
+  height: 100%;
+  box-shadow: 0px 0px 75px;
+  padding-top: 74px;
+}
+
+#UI {
+  color: #ff611d;
+}
+
+#dropdown {
+  color: #ff611d;
+  margin-right: 5%;
+}
+
+.custom-toggler .navbar-toggler-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255, 97, 29)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+}
+
+.custom-toggler.navbar-toggler {
+  border-color: #ff611d;
+}
+
+#produtos {
+  margin-top: 6%;
+}
+
+footer {
+  color: #FF611D;
+  background-color: #171717;
+  width: 100%;
+  padding-top: .5rem;
+}
+
+#cont {
+  font-size: 12px;
+}
+
+.tx_sl {
+  font-size: 10px;
+}
+
+/* #copy{
+  margin-top: 7.5rem;
+} */
+
+#bread {
+  margin-left: 2%;
+}
+
+/* test
+@font-face {
+  font-family: Agrandir-Tight;
+  src: url('./Agrandir-Tight.ttf');
+}
+@font-face {
+  font-family: Agrandir-GrandLight;
+  src: url('./Agrandir-GrandLight.ttf');
+}
+@font-face {
+font-family: Agrandir-TextBold;
+src: url('./Agrandir-TextBold.otf');
+}
+/* h1{
+  font-family:Agrandir-GrandLight;
+} */
+/* h2{
+  font-family:Agrandir-Tight;
+}
+html, body {
+  background: #c0c0c0;
+  height: 100%;
+}
+
+
+#header{
+background: #171717;
+color: #ff611d;
+}
+.card{
+transition: .2s;
+}
+.card:hover{
+transform: scale(1.05);
+}
+#menu{
+font-family: 'Agrandir-TextBold';
+margin-right: auto;
+width: 85%;
+}
+
+h6{
+color: #ff611d;
+text-align: center;
+}
+
+.container {
+background-color: #dddddd;
+height: 100%;
+box-shadow: 0px 0px 75px;
+padding-top: 74px;
+}
+
+#UI{
+color: #ff611d;
+}
+
+#dropdown{
+color: #ff611d;
+margin-right: 5%;
+}
+
+.custom-toggler .navbar-toggler-icon {
+background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255, 97, 29)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+}
+
+.custom-toggler.navbar-toggler {
+border-color: #ff611d;
+} 
+
+#produtos{
+margin-top: 6%;
+}
+
+footer{
+color: #FF611D; 
+background-color: #171717;
+width: 100%;
+padding-top: .5rem;
+}
+
+#cont{
+font-size: 12px;
+}
+
+.tx_sl{
+ font-size: 10px;
+}
+
+#bread{
+margin-left: 2%;
+}
+.btn {
+background-color: #FF611D;
+width: 100%;
+margin-left: auto;
+margin-right: auto;
+font-weight: bold;
+font-family: 'Agrandir-TextBold';
+color: white;
+text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.35);
+height: auto;
+}
+.btn p{
+margin-top: auto;
+margin-bottom: auto;
+line-height: 42px;
+font-size: 115%;
+}
+.carousel-item img {
+border-radius: 10px;
+}
+
+.carousel {
+margin-bottom: 50px;
+margin-left: auto;
+margin-right: auto;
+}
+#cardHomePage img {
+border-radius: 10px;
+}
+
+#cardHomePage {
+margin-top: 25px;
+margin-bottom: 50px;
+margin-left: 12.5px;
+margin-right: 12.5px;
+box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.35);
+border-radius: 10px;
+transition: transform .2s;
+padding: 10px;
+}
+.dropdown-item{
+color: #ff611d;
+}
+.dropdown-item:hover{
+background-color: #ff611d;
+color: white;
+text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.35);
+}
+.dropdown-menu{
+background-color: #424242;
+}
+#categoria {
+background-color: #dddddd;
+color: #171717;
+width: auto;
+font-size: 32px;
+}
+
+#catButton{
+width: 100%;
+text-align: center;
+}
+#catButton:hover {
+color: #dddddd;
+background-color: #dd500c;
+}
+
+#cardHomePage:hover {
+transform: scale(1.1);
+}
+#cardHomePage {
+margin-top: 25px;
+margin-bottom: 50px;
+margin-left: 12.5px;
+margin-right: 12.5px;
+box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.35);
+border-radius: 10px;
+transition: transform .2s;
+padding: 10px;
+} */
