@@ -18,15 +18,15 @@
                 <form action="new_usuario.php" method="post">
                 
                     <div class="form-group">
-                        <label>Usuario</label>
-                        <input type="text" name="login" class='form-control'>
+                        <label class="d-flex">Usuario <p class="text-danger">*</p></label> 
+                        <input type="text" name="login" class='form-control' placeholder="Usuario">
                     </div>
 
                     <div class="form-group">
-                        <label>Senha</label>
-                        <input type="password" name="senha" class='form-control'>
+                        <label class="d-flex">Senha <p class="text-danger">*</p> </label>
+                        <input type="password" name="senha" class='form-control'placeholder="Senha" >
                     </div>
-
+                    <br>
                     <div class="form-group text-center">
                         <button type="submit" class="btn btn-success"><h5>Entrar</h5> </button>
                     </div>
