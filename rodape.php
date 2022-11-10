@@ -8,6 +8,7 @@
                 <div class="col-md-3 col-sm-12 text-center">
                     <img src="./assets/RaguteFooter.png" alt="Bootstrap" width="160px" height="160px" >
                     <script src="./assets/bootstrap.bundle.min.js"></script>
+                    <script src="./assets/bootstrap.bundle.js"></script>
                 </div>
                 <div class="col-md-4 col-sm-12 text-center ">
                     <p>Contato</p>
