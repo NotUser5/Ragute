@@ -1,4 +1,7 @@
-<?php include "./uCabecalho.php"; 
+<?php 
+$titulo = "Cadastro de Produtos";
+include "./uCabecalho.php"; 
+
 
 include "./conexao.php";
 if (isset($_POST) && !empty($_POST)){
