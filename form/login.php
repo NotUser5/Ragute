@@ -1,3 +1,46 @@
+<?php 
+    include './conexao.php';
+    $query = "select login from usuarios; ";
+    $resultado = mysqli_query($conexao,$query)  ; 
+    $query2 ='select senha from usuarios;';
+    $resultado2 =mysqli_query($conexao,$query2);
+
+    if (isset($_POST) && !empty($_POST)){
+        $login = $_POST["login"];
+        $senha = $_POST["senha"];
+    }
+    else{
+        ?>
+        <script>
+            alert('Insira o Login e a Senha');
+        </script>
+
+        <?php
+    }
+
+    if ($resultado == $login){
+        if($senha == $resultado2){
+            ?>
+                <script type="text/javascript">location.href = './formCadProdutos.php';</script>
+            <?php
+
+        }
+        else{
+            ?>
+            <script>
+                alert('Senha Incorreta');
+            </script>
+            <?php   
+        }
+    }
+    else{
+        ?>
+        <script>
+            alert('Login Incorreta');
+        </script>
+        <?php   
+    }  
+?>
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -20,6 +63,7 @@
                     <div class="form-group">
                         <label class="d-flex">Usuario <p class="text-danger">*</p></label> 
                         <input type="text" name="login" class='form-control' placeholder="Usuario">
+
                     </div>
 
                     <div class="form-group">
