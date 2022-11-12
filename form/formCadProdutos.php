@@ -4,6 +4,12 @@ include "./uCabecalho.php";
 
 
 include "./conexao.php";
+$querySelect = "select ID from CATEGORIA; ";
+$resultadoSelect = mysqli_query($conexao, $querySelect);
+echo "<pre>";
+print_r($querySelect);
+echo "</pre>";
+
 if (isset($_POST) && !empty($_POST)){
     $descricao = $_POST["descricao"];
     $valor = $_POST["valor"];
@@ -17,8 +23,11 @@ if (isset($_POST) && !empty($_POST)){
     }
 
     if(isset($_FILES["imagem"]) && !empty($_FILES["imagem"])){
-        $imagem = "./img/".$_FILES["imagem"]["name"];
-        move_uploaded_file($_FILES["imagem"]["tmp_name"], $imagem);
+        $new_name = $_FILES["imagem"]["name"]; //Definindo um novo nome para o arquivo
+        $dir = './img/'; //Diretório para uploads
+        move_uploaded_file($_FILES['imagem']['tmp_name'], $dir.$new_name);
+        $imagem = $dir.$new_name; // Criando caminho no bd
+        move_uploaded_file($_FILES["imagem"]["tmp_name"], $imagem); 
     } else {
         $imagem = "";
     }
@@ -28,7 +37,6 @@ if (isset($_POST) && !empty($_POST)){
 
     if($resultado){
         header("Location: ./formCadProdutos.php");
-        exit();
         ?>
             <div class="alert alert-success">
                 Cadastrado com sucesso
@@ -42,8 +50,6 @@ if (isset($_POST) && !empty($_POST)){
         <?php
     }
 } 
-
-
 
 
 ?>
@@ -72,14 +78,15 @@ if (isset($_POST) && !empty($_POST)){
                     <div class="form-group text-center" id="inserir">
                         <select class="form-select" name="select">
                             <option selected>Selecione a Categoria</option>
+                     
                             <option value="1">Hamburger</option>
                             <option value="2">Frango</option>
                             <option value="3">Bebidas</option>
                         </select>
                         
                         <div class="form-group" id="inserir">
-                            <label>Selecione a Imagem</label>
-                            <input type="file" name="imagem" id="upImg" accept="image/*" class="form-control" />                       
+                            <label>Carregar Imagem</label>
+                            <input type="file" name="imagem" id="upImg" accept="image/*" class="form-control form-control-sm" />                       
                         </div>
 
                         <div class="form-check text-center" id="inserir">
