@@ -34,7 +34,7 @@
                         <a id="UI" class="nav-link active" aria-current="page" href="./index.php">Login</a>
                     </li>
                     <li class="nav-item">
-                        <a id="UI" class="nav-link active" aria-current="page" href="#">Cadastro</a>
+                        <a id="UI" class="nav-link active" aria-current="page" href="./formCadProdutos">Cadastro</a>
                     </li>
                 </ul>
 
