@@ -4,7 +4,13 @@ include "./cabacalho.php";
 
 include "./form/conexao.php";
 $querySelect = "select ID, DESCRICAO, VALOR, ATIVO, IMG, ID_CATEGORIA from PRODUTOS ORDER BY 1; ";
+$querySelect2 = "select ID, DESCRICAO, VALOR, ATIVO, IMG, ID_CATEGORIA from PRODUTOS ORDER BY 1; ";
+$querySelect3 = "select ID, DESCRICAO, VALOR, ATIVO, IMG, ID_CATEGORIA from PRODUTOS ORDER BY 1; ";
+$querySelect4 = "select ID, DESCRICAO, VALOR, ATIVO, IMG, ID_CATEGORIA from PRODUTOS ORDER BY 1; ";
 $resultadoSelect = mysqli_query($conexao, $querySelect);
+$resultadoSelect2 = mysqli_query($conexao, $querySelect2);
+$resultadoSelect3 = mysqli_query($conexao, $querySelect3);
+$resultadoSelect4 = mysqli_query($conexao, $querySelect4);
 
 
 
@@ -47,7 +53,8 @@ $resultadoSelect = mysqli_query($conexao, $querySelect);
         <div class="row">
         <?php
             while ($linha = mysqli_fetch_array($resultadoSelect) ) {
-                if($linha["ATIVO"] == '1' && $linha["ID_CATEGORIA"] == '1'){
+                $linha2 = $linha;
+                if($linha["ATIVO"] === '1' && $linha["ID_CATEGORIA"] === '1'){
                     ?>
                         <div class="col-sm-12 col-md-6 col-lg-4">
                             <div class="card mb-3" style="max-width: 540px;">
@@ -72,24 +79,25 @@ $resultadoSelect = mysqli_query($conexao, $querySelect);
             ?>
         </div>
 
-         <h3 class="p-3">Artesanais</h2>
+         <h3 class="p-3">Artesanais</h3>
 
         <div class="row">
-        <?php
-                while ($linha = mysqli_fetch_array($resultadoSelect) ) {
-                    if($linha["ATIVO"] == '1' && $linha["ID_CATEGORIA"] == '2'){
+            <?php   
+
+                while ($linha2 = mysqli_fetch_array($resultadoSelect2) ) {
+                    if($linha2["ATIVO"] === '1' && $linha2["ID_CATEGORIA"] === '2'){
                         ?>
                             <div class="col-sm-12 col-md-6 col-lg-4">
                                 <div class="card mb-3" style="max-width: 540px;">
                                     <div class="row">
                                         <div class="col-sm-12 col-md-6 ">
-                                            <img src="<?php echo $linha["IMG"]?>" class="img-fluid rounded-start" alt="Lanche de Hamburguer">
+                                            <img src="<?php echo $linha2["IMG"]?>" class="img-fluid rounded-start" alt="Lanche de Hamburguer">
                                         </div>
                                         <div class="col-sm-11 col-md-5">
                                             <div class="card-body">
-                                                <h5 class="card-title"><?php echo $linha["DESCRICAO"]; ?></h5>
+                                                <h5 class="card-title"><?php echo $linha2["DESCRICAO"]; ?></h5>
                                                 <p class="card-text">IngredientesIngredientesIngredientesIngredientesIngredientesIngredientesIngredientes</p>
-                                                <h6 class="card-title">R$<?php echo $linha["VALOR"]?></h6>
+                                                <h6 class="card-title">R$<?php echo $linha2["VALOR"]?></h6>
                                             </div>
                                         </div>
                                     </div>
@@ -99,55 +107,26 @@ $resultadoSelect = mysqli_query($conexao, $querySelect);
                     }
                 }
 
-                ?>
-            </div>
-        <h3 class="p-3">Frango</h2>
-
-        <div class="row">
-        <?php
-                while ($linha = mysqli_fetch_array($resultadoSelect) ) {
-                    if($linha["ATIVO"] == '1' && $linha["ID_CATEGORIA"] == '3'){
-                        ?>
-                            <div class="col-sm-12 col-md-6 col-lg-4">
-                                <div class="card mb-3" style="max-width: 540px;">
-                                    <div class="row">
-                                        <div class="col-sm-12 col-md-6 ">
-                                            <img src="<?php echo $linha["IMG"]?>" class="img-fluid rounded-start" alt="Lanche de Hamburguer">
-                                        </div>
-                                        <div class="col-sm-11 col-md-5">
-                                            <div class="card-body">
-                                                <h5 class="card-title"><?php echo $linha["DESCRICAO"]; ?></h5>
-                                                <p class="card-text">IngredientesIngredientesIngredientesIngredientesIngredientesIngredientesIngredientes</p>
-                                                <h6 class="card-title">R$<?php echo $linha["VALOR"]?></h6>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        <?php
-                    }
-                }
-
-                ?>
+            ?>
         </div>
-        <h3 class="p-3">Hot-Dogs</h2>
+        <h3 class="p-3">Frango</h3>
 
         <div class="row">
-        <?php
-                while ($linha = mysqli_fetch_array($resultadoSelect) ) {
-                    if($linha["ATIVO"] == '1' && $linha["ID_CATEGORIA"] == '4'){
+            <?php
+                while ($linha3 = mysqli_fetch_array($resultadoSelect3) ) {
+                    if($linha3["ATIVO"] === '1' && $linha3["ID_CATEGORIA"] === '3'){
                         ?>
                             <div class="col-sm-12 col-md-6 col-lg-4">
                                 <div class="card mb-3" style="max-width: 540px;">
                                     <div class="row">
                                         <div class="col-sm-12 col-md-6 ">
-                                            <img src="<?php echo $linha["IMG"]?>" class="img-fluid rounded-start" alt="Lanche de Hamburguer">
+                                            <img src="<?php echo $linha3["IMG"]?>" class="img-fluid rounded-start" alt="Lanche de Hamburguer">
                                         </div>
                                         <div class="col-sm-11 col-md-5">
                                             <div class="card-body">
-                                                <h5 class="card-title"><?php echo $linha["DESCRICAO"]; ?></h5>
+                                                <h5 class="card-title"><?php echo $linha3["DESCRICAO"]; ?></h5>
                                                 <p class="card-text">IngredientesIngredientesIngredientesIngredientesIngredientesIngredientesIngredientes</p>
-                                                <h6 class="card-title">R$<?php echo $linha["VALOR"]?></h6>
+                                                <h6 class="card-title">R$<?php echo $linha3["VALOR"]?></h6>
                                             </div>
                                         </div>
                                     </div>
@@ -157,7 +136,36 @@ $resultadoSelect = mysqli_query($conexao, $querySelect);
                     }
                 }
 
-                ?>
+            ?>
+        </div>
+        <h3 class="p-3">Hot-Dogs</h3>
+
+        <div class="row">
+            <?php
+                while ($linha4 = mysqli_fetch_array($resultadoSelect4) ) {
+                    if($linha4["ATIVO"] === '1' && $linha4["ID_CATEGORIA"] === '4'){
+                        ?>
+                            <div class="col-sm-12 col-md-6 col-lg-4">
+                                <div class="card mb-3" style="max-width: 540px;">
+                                    <div class="row">
+                                        <div class="col-sm-12 col-md-6 ">
+                                            <img src="<?php echo $linha4["IMG"]?>" class="img-fluid rounded-start" alt="Lanche de Hamburguer">
+                                        </div>
+                                        <div class="col-sm-11 col-md-5">
+                                            <div class="card-body">
+                                                <h5 class="card-title"><?php echo $linha4["DESCRICAO"]; ?></h5>
+                                                <p class="card-text">IngredientesIngredientesIngredientesIngredientesIngredientesIngredientesIngredientes</p>
+                                                <h6 class="card-title">R$<?php echo $linha4["VALOR"]?></h6>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        <?php
+                    }
+                }
+
+            ?>
         </div> 
 
 
