@@ -4,17 +4,20 @@ include "./uCabecalho.php";
 
 
 include "./conexao.php";
-$querySelect = "select ID from CATEGORIA; ";
+$querySelect = "select ID, NOME from CATEGORIA; ";
 $resultadoSelect = mysqli_query($conexao, $querySelect);
-echo "<pre>";
-print_r($querySelect);
-echo "</pre>";
+
+// while ($linha = mysqli_fetch_array($resultadoSelect) ) {   
+//     echo "<pre>";
+//     print_r($linha);
+//     echo "</pre>";
+// }
 
 if (isset($_POST) && !empty($_POST)){
     $descricao = $_POST["descricao"];
     $valor = $_POST["valor"];
     $ingredientes = $_POST["ingredientes"];
-    $select = $_POST["select"];
+    $categoria = $_POST["select"];
 
     if(isset($_POST["ativo"]) && $_POST["ativo"] == "on"){
         $ativo = 1;
@@ -31,8 +34,10 @@ if (isset($_POST) && !empty($_POST)){
     } else {
         $imagem = "";
     }
+
     
-    $query = "insert into produtos (ID, DESCRICAO, VALOR, ATIVO, INGREDIENTES, IMG) VALUES (NULL,'$descricao', '$valor', '$ativo', '$ingredientes', '$imagem')";
+    
+    $query = "insert into produtos (ID, DESCRICAO, VALOR, ATIVO, INGREDIENTES, IMG, ID_CATEGORIA) VALUES (NULL,'$descricao', '$valor', '$ativo', '$ingredientes', '$imagem', '$categoria')";
     $resultado = mysqli_query($conexao, $query);
 
     if($resultado){
@@ -54,6 +59,9 @@ if (isset($_POST) && !empty($_POST)){
 
 ?>
 
+
+
+    
 <div class="row">
     <div class="offset-4 col-md-4">
         <div class="card" style="width: 80%;" id="cartao">
@@ -78,20 +86,21 @@ if (isset($_POST) && !empty($_POST)){
                     <div class="form-group text-center" id="inserir">
                         <select class="form-select" name="select">
                             <option selected>Selecione a Categoria</option>
-                     
-                            <option value="1">Hamburger</option>
-                            <option value="2">Frango</option>
-                            <option value="3">Bebidas</option>
-                        </select>
-                        
-                        <div class="form-group" id="inserir">
-                            <label>Carregar Imagem</label>
-                            <input type="file" name="imagem" id="upImg" accept="image/*" class="form-control form-control-sm" />                       
-                        </div>
+                            <?php
+                                while ($linha = mysqli_fetch_array($resultadoSelect) ) {
+                                    echo '<option value="'. $linha["ID"].'">'. $linha["NOME"]. '</option>';
+                                }
+                            ?>
+                        </select>                       
+                    </div>
+                    
+                    <div class="form-group text-center" id="inserir">
+                        <label>Carregar Imagem</label>
+                        <input type="file" name="imagem" id="upImg" accept="image/*" class="form-control form-control-sm"/>                       
+                    </div>
 
-                        <div class="form-check text-center" id="inserir">
-                            Ativo <input type="checkbox" name="ativo">
-                        </div>
+                    <div class="form-check text-center" id="inserir">
+                        Ativo <input type="checkbox" name="ativo">
                     </div>
 
                     <div class="form-group text-center" id="inserir" id="btnSalvar">
@@ -99,13 +108,13 @@ if (isset($_POST) && !empty($_POST)){
                             Salvar Produto
                         </button>
                     </div>
-
+                                
                 </form>
             </div>
         </div>
     </div>
 
-
+    
 </div>
 
 
