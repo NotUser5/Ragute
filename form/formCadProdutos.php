@@ -1,10 +1,14 @@
 <?php 
+session_start();
+include "./verificador.php";
+
 $titulo = "Cadastro de Produtos";
 include "./uCabecalho.php"; 
 
 include "./conexao.php";
 $querySelect = "select ID, NOME from CATEGORIA; ";
 $resultadoSelect = mysqli_query($conexao, $querySelect);
+
 
 // $querySelect2 = "select ID, NOME from INGREDIENTES; ";
 // $resultadoSelect2 = mysqli_query($conexao, $querySelect2);
