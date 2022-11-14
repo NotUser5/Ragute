@@ -2,7 +2,7 @@
 <html lang="pt-br">
 
 <head>
-<meta charset="UTF-8">
+    <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title><?php echo $titulo; ?></title>
@@ -13,7 +13,7 @@
 
 
 <body>
-    
+
     <nav id="header" class="navbar navbar-expand-lg d-flex justify-content-around">
 
         <div class="container-fluid">
@@ -22,14 +22,13 @@
             </a>
 
 
-            <button id="dropdown" class="navbar-toggler ml-auto custom-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
-                aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <button id="dropdown" class="navbar-toggler ml-auto custom-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
 
 
             <div class="collapse navbar-collapse " id="navbarNavDropdown">
-                <ul id="menu" class="navbar-nav me-auto mb-2 mb-lg-0 d-flex justify-content-around" >
+                <ul id="menu" class="navbar-nav me-auto mb-2 mb-lg-0 d-flex justify-content-around">
                     <li class="nav-item">
                         <a id="UI" class="nav-link active" aria-current="page" href="./index.php">Login</a>
                     </li>
