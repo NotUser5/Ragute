@@ -84,7 +84,7 @@ if (isset($_POST) && !empty($_POST)) {
                         <label>
                             <h6 class="card-subtitle mb-2 text-muted">Descrição</h6>
                         </label>
-                        <input type="text" name="descricao" class="form-control" placeholder="Uma breve descrição com os ingredientes."/>
+                        <input type="text" name="descricao" class="form-control" placeholder="Uma breve descrição."/>
                     </div>
 
                     <div class="form-group text-center" id="inserir">
@@ -127,7 +127,6 @@ if (isset($_POST) && !empty($_POST)) {
 </div>
 
 </body>
-
 <script src="../assets/bootstrap.bundle.min.js"></script>
 
 </html>
