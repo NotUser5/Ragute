@@ -12,6 +12,16 @@
 <body id='bg'>
     <div  class="container-fluid">
         <div id='top-card'>
+            <?php
+                if(isset($_GET["erro"]) && !empty($_GET["erro"])){
+                    ?>
+                        <div class="row alert alert-danger">
+                            <?php echo $_GET["erro"]; ?>
+                        </div>
+                        
+                    <?php
+                    }
+            ?>
             <div class="row">
                 <div class="offset-md-4 col-md-4">
                 <h2>Login</h2>
@@ -42,11 +52,3 @@
 </body>
 
 </html>
-<?php
-if(isset($_GET["erro"]) && !empty($_GET["erro"])){
-    ?>
-        <script>alert( <?php echo $_GET["erro"]; ?>) </script>
-        
-    <?php
-    }
-?>
