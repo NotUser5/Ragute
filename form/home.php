@@ -1,6 +1,9 @@
 <?php
-$titulo = "Cadastro de Categorias";
+$titulo = "Tabela de Consulta de Produtos";
 include "./uCabecalho.php";
+include "./conexao.php";
+$query = "select ID,DESCRICAO,VALOR,INGREDIENTES,ATIVO,IMG,ID_CATEGORIA from produtos";
+$resultado = mysqli_query($conexao, $query);
 
 if (isset($_POST) && !empty($_POST)) {
 
@@ -11,7 +14,7 @@ if (isset($_POST) && !empty($_POST)) {
     $resultado = mysqli_query($conexao, $query);
 
     if ($resultado) {
-        header("Location: ./home.php");
+        header("Location: ./tableProdutos.php");
         exit();
 ?>
         <div class="alert alert-success">
@@ -28,32 +31,17 @@ if (isset($_POST) && !empty($_POST)) {
 }
 ?>
 
-<div class="offset-1 col-md-10">
-    <div class="card mt-4 mb-4">
-        <div class="card-header bg-dark text-white">Produtos</div>
-        <div class="card-body">
-            <div class="row">
-                <div class="col-3 text-center">
-                    <a href="./formCadProdutos.php" class="btn btn-success">Novo Produto</a>
-                </div>
-                <div class="col-2">
-                    <select name="opcao" class="form-control">
-                        <option selected="selected" value="0">Todos</option>
-                        <option value="1">Por Nome</option>
-                        <option value="2">Por Código</option>
-                    </select>
-                </div>
-                <div class="col-4">
-                    <input type="text" class="form-control" name="textoPesquisado" placeholder="Digite aqui para pesquisar." />
-                </div>
-                <div class="col-2">
-                    <button class="btn btn-dark">Pesquisar</button>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
 
+<div class="card mt-4 mb-4 col-2 text-center">
+	<div class="card-header bg-dark text-white"><h2>Tabela Produtos</h2></div>
+	<div class="card-body">
+		<div class="row">
+			<div>
+				<a href="./formCadProdutos.php" class="btn btn-success">Novo Produto</a>
+			</div>
+		</div>
+	</div>
+</div>
 
 <?php
 if (isset($_GET["erro"]) && !empty($_GET["erro"])) {
@@ -75,9 +63,56 @@ if (isset($_GET["sucesso"]) && !empty($_GET["sucesso"])) {
 }
 ?>
 
-</div>
-
-</body>
-<script src="../assets/bootstrap.bundle.min.js"></script>
-
-</html>
+<table class="table table-hover table-striped">
+	<thead class="text-center">
+		<tr>
+			<th>ID</th>
+			<th>Nome</th>
+			<th>Valor</th>
+			<th>Descrição</th>
+			<th>Ativo</th>
+			<th>Imagem</th>
+			<th>Categoria</th>
+			<th></th>
+		</tr>
+	</thead>
+	<tbody class="text-center">
+		<?php
+		while ($linha = mysqli_fetch_array($resultado)) {
+		?>
+			<tr>
+				<td><?php echo $linha["ID"]; ?></td>
+				<td><?php echo $linha["DESCRICAO"]; ?></td>
+				<td>R$<?php echo $linha["VALOR"]; ?></td>
+				<td><?php echo $linha["INGREDIENTES"]; ?></td>
+				<td>
+					<?php
+					if ($linha["ATIVO"] == 1) {
+					?>
+						<input type="checkbox" checked disabled />
+					<?php
+					} else {
+					?>
+						<input type="checkbox" disabled />
+					<?php
+					}
+					?>
+				</td>
+				<td><img src=".<?php echo $linha["IMG"]; ?>" width="150" height="30"></td>
+				<td>
+					<?php
+						$queryCat="select ID,NOME from categoria";
+						$resultadoCat = mysqli_query($conexao, $queryCat);
+						while($linhaCat = mysqli_fetch_array($resultadoCat)){
+							if($linha["ID_CATEGORIA"]==$linhaCat["ID"]) echo $linhaCat["NOME"];
+						}
+					?>
+				</td>
+				<td><a class="btn btn-warning" href="./usuariosEdit.php">Editar</a></td>
+				<td><a class="btn btn-danger" href="./usuariosDelete.php">Excluir</a></td>
+			</tr>
+		<?php
+		}
+		?>
+	</tbody>
+</table>
