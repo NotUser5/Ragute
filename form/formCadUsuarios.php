@@ -13,7 +13,7 @@ if (isset($_POST) && !empty($_POST)) {
     if (empty($login)){
         header("Location: formCadUsuarios.php?erro=Insira o Login!");
     } else if (empty($senha)) {
-        header("Location: formCadUsuarios.php?erro=Campo senha Obrigatório\\\\\\\\\\!");
+        header("Location: formCadUsuarios.php?erro=Campo senha Obrigatório!");
     } else {
         $query = "insert into usuarios (login, senha) values ('$login', MD5('$senha')); ";
         $resultado = mysqli_query($conexao, $query);
@@ -47,14 +47,14 @@ if (isset($_POST) && !empty($_POST)) {
                         <label>
                             <h6 class="card-subtitle mb-2 text-muted">Login</h6>
                         </label>
-                        <input type="text" name="login" id="login" class="form-control" placeholder="Digite seu login." />
+                        <input type="text" name="login" id="login" class="form-control" placeholder="Digite seu login." minlength="6" maxlength="10">
                     </div>
 
                     <div class="form-group" id="inserir">
                         <label>
                             <h6 class="card-subtitle mb-2 text-muted">Senha</h6>
                         </label>
-                        <input type="password" name="senha" class="form-control" placeholder="Digite a sua senha." />
+                        <input type="password" name="senha" class="form-control" placeholder="Digite a sua senha." minlength="6" maxlength="10"/>
                     </div>
 
                     <div class="form-group text-center" id="inserir">
