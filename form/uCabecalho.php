@@ -10,8 +10,6 @@
     <link rel="stylesheet" href="./uStyle.css">
 </head>
 
-
-
 <body>
 
     <nav id="header" class="navbar navbar-expand-lg d-flex justify-content-around">
