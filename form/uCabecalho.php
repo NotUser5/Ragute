@@ -15,7 +15,7 @@
     <nav id="header" class="navbar navbar-expand-lg d-flex justify-content-around">
 
         <div class="container-fluid">
-            <a id="logo" class="navbar-brand" href="./index.php">
+            <a id="logo" class="navbar-brand" href="./home.php">
                 <img src="../assets/ragute2.png" alt="Bootstrap" width="220" height="50">
             </a>
 
