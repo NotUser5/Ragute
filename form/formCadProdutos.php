@@ -45,7 +45,7 @@ if (isset($_POST) && !empty($_POST)) {
         $resultado = mysqli_query($conexao, $query);
 
         if ($resultado) {
-            header("Location: home.php?sucesso=Cadastrado com sucesso");
+            header("Location: tabProdutos.php?sucesso=Cadastrado com sucesso");
             exit();
         }
     }
@@ -73,7 +73,7 @@ if (isset($_POST) && !empty($_POST)) {
                         <label>
                             <h6 class="card-subtitle mb-2 text-muted">Nome</h6>
                         </label>
-                        <input type="text" name="nome" class="form-control" placeholder="Você digita o nome do produto aqui." minlength="6" maxlength="10"/>
+                        <input type="text" name="nome" class="form-control" placeholder="Você digita o nome do produto aqui." minlength="2" maxlength="30"/>
                     </div>
 
                     <div class="form-group" id="inserir">

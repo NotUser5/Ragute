@@ -103,3 +103,9 @@ footer {
 body {
   background-color: #dddddd;
 }
+
+#btn-rag{
+  font-weight: bold;
+  color: #ffffff;
+  background-color: #ff611d;;
+}
