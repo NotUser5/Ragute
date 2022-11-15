@@ -1,16 +1,11 @@
 @font-face {
-	font-family: Agrandir-Tight;
-	src: url('../assets/Agrandir-Tight.ttf');
+  font-family: Agrandir-Tight;
+  src: url('./Agrandir-Tight.ttf');
 }
 
 @font-face {
-	font-family: Agrandir-GrandLight;
-	src: url('../assets/Agrandir-GrandLight.ttf');
-}
-
-@font-face {
-	font-family: Agrandir-TextBold;
-	src: url('../assets/Agrandir-TextBold.otf');
+  font-family: Agrandir-GrandLight;
+  src: url('./Agrandir-GrandLight.ttf');
 }
 
 /* h1{
@@ -21,36 +16,36 @@
 } */
 
 #header {
-	background: #171717;
-	color: #ff611d;
+  background: #171717;
+  color: #ff611d;
 }
 
 #menu {
-	width: 90%;
-	font-family: 'Agrandir-TextBold';
+  width: 90%;
+
 }
 
 h6 {
-	color: #ff611d;
-	text-align: center;
+  color: #ff611d;
+  text-align: center;
 }
 
 
 #UI {
-	color: #ff611d;
+  color: #ff611d;
 }
 
 #inserir {
-	margin-top: 1.5%;
+  margin-top: 1.5%;
 }
 
 #btnUpImg {
-	margin: 1.5%;
+  margin: 1.5%;
 }
 
 #dropdown {
-	color: #ff611d;
-	margin-right: 5%;
+  color: #ff611d;
+  margin-right: 5%;
 }
 
 .custom-toggler .navbar-toggler-icon {
@@ -58,26 +53,26 @@ h6 {
 }
 
 .custom-toggler.navbar-toggler {
-	border-color: #ff611d;
+  border-color: #ff611d;
 }
 
 #produtos {
-	margin-top: 6%;
+  margin-top: 6%;
 }
 
 footer {
-	color: #FF611D;
-	background-color: #171717;
-	width: 100%;
-	padding-top: .5rem;
+  color: #FF611D;
+  background-color: #171717;
+  width: 100%;
+  padding-top: .5rem;
 }
 
 #cont {
-	font-size: 12px;
+  font-size: 12px;
 }
 
 .tx_sl {
-	font-size: 10px;
+  font-size: 10px;
 }
 
 /* #copy{
@@ -85,26 +80,26 @@ footer {
 } */
 
 #bread {
-	margin-left: 2%;
+  margin-left: 2%;
 }
 
 #cadastro {
-	margin-top: 5%;
-	margin-bottom: 5%;
+  margin-top: 5%;
+  margin-bottom: 5%;
 }
 
 #cartao {
-	padding: 3%;
+  padding: 3%;
 }
 
 #btnSalvar {
-	margin-top: 2%;
+  margin-top: 2%;
 }
 
 #campo {
-	text-align: center;
+  text-align: center;
 }
 
 body {
-	background-color: #dddddd;
+  background-color: #dddddd;
 }
