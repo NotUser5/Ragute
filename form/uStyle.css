@@ -1,5 +1,4 @@
 @font-face {
-<<<<<<< HEAD
 	font-family: Agrandir-Tight;
 	src: url('../assets/Agrandir-Tight.ttf');
 }
@@ -12,15 +11,6 @@
 @font-face {
 	font-family: Agrandir-TextBold;
 	src: url('../assets/Agrandir-TextBold.otf');
-=======
-  font-family: Agrandir-Tight;
-  src: url('./Agrandir-Tight.ttf');
-}
-
-@font-face {
-  font-family: Agrandir-GrandLight;
-  src: url('./Agrandir-GrandLight.ttf');
->>>>>>> 945c31d478e2cf2ebc02b546dfb9192a7dbb7f6d
 }
 
 /* h1{
@@ -31,7 +21,6 @@
 } */
 
 #header {
-<<<<<<< HEAD
 	background: #171717;
 	color: #ff611d;
 }
@@ -44,25 +33,10 @@
 h6 {
 	color: #ff611d;
 	text-align: center;
-=======
-  background: #171717;
-  color: #ff611d;
-}
-
-#menu {
-  width: 90%;
-
-}
-
-h6 {
-  color: #ff611d;
-  text-align: center;
->>>>>>> 945c31d478e2cf2ebc02b546dfb9192a7dbb7f6d
 }
 
 
 #UI {
-<<<<<<< HEAD
 	color: #ff611d;
 }
 
@@ -77,22 +51,6 @@ h6 {
 #dropdown {
 	color: #ff611d;
 	margin-right: 5%;
-=======
-  color: #ff611d;
-}
-
-#inserir {
-  margin-top: 1.5%;
-}
-
-#btnUpImg {
-  margin: 1.5%;
-}
-
-#dropdown {
-  color: #ff611d;
-  margin-right: 5%;
->>>>>>> 945c31d478e2cf2ebc02b546dfb9192a7dbb7f6d
 }
 
 .custom-toggler .navbar-toggler-icon {
@@ -100,7 +58,6 @@ h6 {
 }
 
 .custom-toggler.navbar-toggler {
-<<<<<<< HEAD
 	border-color: #ff611d;
 }
 
@@ -121,28 +78,6 @@ footer {
 
 .tx_sl {
 	font-size: 10px;
-=======
-  border-color: #ff611d;
-}
-
-#produtos {
-  margin-top: 6%;
-}
-
-footer {
-  color: #FF611D;
-  background-color: #171717;
-  width: 100%;
-  padding-top: .5rem;
-}
-
-#cont {
-  font-size: 12px;
-}
-
-.tx_sl {
-  font-size: 10px;
->>>>>>> 945c31d478e2cf2ebc02b546dfb9192a7dbb7f6d
 }
 
 /* #copy{
@@ -150,7 +85,6 @@ footer {
 } */
 
 #bread {
-<<<<<<< HEAD
 	margin-left: 2%;
 }
 
@@ -174,28 +108,3 @@ footer {
 body {
 	background-color: #dddddd;
 }
-=======
-  margin-left: 2%;
-}
-
-#cadastro {
-  margin-top: 5%;
-  margin-bottom: 5%;
-}
-
-#cartao {
-  padding: 3%;
-}
-
-#btnSalvar {
-  margin-top: 2%;
-}
-
-#campo {
-  text-align: center;
-}
-
-body {
-  background-color: #dddddd;
-}
->>>>>>> 945c31d478e2cf2ebc02b546dfb9192a7dbb7f6d
