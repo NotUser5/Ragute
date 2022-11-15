@@ -10,8 +10,6 @@
     <link rel="stylesheet" href="./uStyle.css">
 </head>
 
-
-
 <body>
 
     <nav id="header" class="navbar navbar-expand-lg d-flex justify-content-around">
@@ -28,15 +26,18 @@
 
 
             <div class="collapse navbar-collapse " id="navbarNavDropdown">
-                <ul id="menu" class="navbar-nav me-auto mb-2 mb-lg-0 d-flex justify-content-around">
+                <ul id="menu" class="navbar-nav me-auto mb-2 mb-lg-0 d-flex justify-content-around text-center">
                     <li class="nav-item">
-                        <a id="UI" class="nav-link active" aria-current="page" href="./login.php">Login</a>
+                        <a id="UI" class="nav-link active" aria-current="page" href="./home.php">Inicio</a>
                     </li>
                     <li class="nav-item">
-                        <a id="UI" class="nav-link active" aria-current="page" href="./formCadProdutos.php">Cadastro</a>
+                        <a id="UI" class="nav-link active" aria-current="page" href="./formCadProdutos.php">Cadastro Produtos</a>
                     </li>
                     <li class="nav-item">
-                        <a id="UI" class="nav-link active text-danger" aria-current="page" href="./logout.php">Sair</a>
+                        <a id="UI" class="nav-link active" aria-current="page" href="./formCadCategorias.php">Cadastro Categorias</a>
+                    </li>
+                    <li class="nav-item">
+                        <a id="UI" class="nav-link active" aria-current="page" href="./formCadUsuarios.php">Cadastro Usuarios</a>
                     </li>
                 </ul>
 

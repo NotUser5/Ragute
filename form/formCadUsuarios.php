@@ -2,27 +2,26 @@
 $titulo = "Cadastro de Usuários";
 include "./uCabecalho.php";
 
-if(isset($_POST) && !empty($_POST)){
+if (isset($_POST) && !empty($_POST)) {
 
     include "./conexao.php";
     $login = $_POST["login"];
     $senha = $_POST["senha"];
 
-    $query = "insert into usuarios (login, senha) values ('$login', MD5('$senha')); ";
-    $resultado = mysqli_query($conexao, $query);
+    if (empty($login) || empty($senha)) {
+        echo '<div class="alert alert-warning" style="margin-top: 1%;">
+                Existem campos vazios!
+                </div>';
+    } else {
+        $query = "insert into usuarios (login, senha) values ('$login', MD5('$senha')); ";
+        $resultado = mysqli_query($conexao, $query);
 
-    if($resultado){
-        header("Location: ./formCadCategorias.php");
-        exit();
-        ?>
-            <div class="alert alert-success">
-                Cadastrado com sucesso
-            </div>
-        <?php
+        if ($resultado) {
+            header("Location: home.php?sucesso=Cadastrado com sucesso");
+            exit();
+        }
     }
-
 }
-
 ?>
 
 <div class="d-grid gap-2 d-md-flex justify-content-md-end" style="margin-top: 1%;">
@@ -41,21 +40,21 @@ if(isset($_POST) && !empty($_POST)){
         <div class="card" style="width: 80%;" id="cartao">
             <div class="card-body">
                 <h5 class="card-title text-center">Cadastro de Usuários</h5>
-                <form action="./formCadUsuarios.php" method="post" enctype="multipart/form-data">
+                <form action="./formCadUsuarios.php" method="post" enctype="multipart/form-data" id="form-usuario">
                     <div class="form-group">
                         <label>
                             <h6 class="card-subtitle mb-2 text-muted">Login</h6>
                         </label>
-                        <input type="text" name="login" class="form-control" placeholder="Digite seu login."/>
+                        <input type="text" name="login" id="login" class="form-control" placeholder="Digite seu login." />
                     </div>
 
                     <div class="form-group" id="inserir">
                         <label>
                             <h6 class="card-subtitle mb-2 text-muted">Senha</h6>
                         </label>
-                        <input type="password" name="senha" class="form-control" placeholder="Digite a sua senha."/>
+                        <input type="password" name="senha" class="form-control" placeholder="Digite a sua senha." />
                     </div>
-                    
+
                     <div class="form-group text-center" id="inserir" id="btnSalvar">
                         <button type="submit" class="btn btn-success">
                             Salvar Usuários
@@ -67,11 +66,8 @@ if(isset($_POST) && !empty($_POST)){
         </div>
     </div>
 
-</div>
+    </body>
 
-</div>
+    <script src="../assets/bootstrap.bundle.min.js"></script>
 
-</body>
-<script src="../assets/bootstrap.bundle.min.js"></script>
-
-</html>
+    </html>
