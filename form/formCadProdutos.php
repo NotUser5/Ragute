@@ -1,4 +1,4 @@
-<?php 
+<?php
 $titulo = "Cadastro de Produtos";
 include "./uCabecalho.php";
 
@@ -6,16 +6,9 @@ include "./conexao.php";
 $querySelect = "select ID, NOME from CATEGORIA; ";
 $resultadoSelect = mysqli_query($conexao, $querySelect);
 
-// $querySelect2 = "select ID, NOME from INGREDIENTES; ";
-// $resultadoSelect2 = mysqli_query($conexao, $querySelect2);
-
-//  while ($linha2 = mysqli_fetch_array($resultadoSelect2) ) {   
-//      echo "<pre>";
-//      print_r($linha2);
-//      echo "</pre>";
-//  }
-
-if (isset($_POST) && !empty($_POST)){
+if (isset($_POST) && !empty($_POST)) {
+    $nome = $_POST["nome"];
+    $valor = $_POST["valor"];
     $descricao = $_POST["descricao"];
     $categoria = $_POST["select"];
 
@@ -36,22 +29,18 @@ if (isset($_POST) && !empty($_POST)){
         $imagem = "";
     }
 
-    $query = "insert into produtos (ID, DESCRICAO, VALOR, ATIVO, INGREDIENTES, IMG, ID_CATEGORIA) VALUES (NULL,'$nome', '$valor', '$ativo', '$descricao', '$imagem', '$categoria')";
-    $resultado = mysqli_query($conexao, $query);
-
-    if ($resultado) {
-        header("Location: ./formCadProdutos.php");
-?>
-        <div class="alert alert-success">
-            Cadastrado com sucesso
-        </div>
-    <?php
+    if (empty($nome) || empty($valor) || empty($descricao) || empty($categoria)) {
+        echo '<div class="alert alert-warning" style="margin-top: 1%;">
+                Existem campos vazios!
+                </div>';
     } else {
-    ?>
-        <div class="alert alert-danger">
-            Erro!
-        </div>
-<?php
+        $query = "insert into produtos (ID, DESCRICAO, VALOR, ATIVO, INGREDIENTES, IMG, ID_CATEGORIA) VALUES (NULL,'$nome', '$valor', '$ativo', '$descricao', '$imagem', '$categoria')";
+        $resultado = mysqli_query($conexao, $query);
+
+        if ($resultado) {
+            header("Location: home.php?sucesso=Cadastrado com sucesso");
+            exit();
+        }
     }
 }
 ?>
@@ -77,21 +66,21 @@ if (isset($_POST) && !empty($_POST)){
                         <label>
                             <h6 class="card-subtitle mb-2 text-muted">Nome</h6>
                         </label>
-                        <input type="text" name="nome" class="form-control" placeholder="Você digita o nome do produto aqui."/>
+                        <input type="text" name="nome" class="form-control" placeholder="Você digita o nome do produto aqui." />
                     </div>
 
                     <div class="form-group" id="inserir">
                         <label>
                             <h6 class="card-subtitle mb-2 text-muted">Valor</h6>
                         </label>
-                        <input type="number" name="valor" class="form-control" placeholder="R$10,00"/>
+                        <input type="number" name="valor" class="form-control" placeholder="R$10,00" />
                     </div>
 
                     <div class="form-group" id="inserir">
                         <label>
                             <h6 class="card-subtitle mb-2 text-muted">Descrição</h6>
                         </label>
-                        <input type="text" name="descricao" class="form-control" placeholder="Uma breve descrição."/>
+                        <input type="text" name="descricao" class="form-control" placeholder="Uma breve descrição." />
                     </div>
 
                     <div class="form-group text-center" id="inserir">
@@ -116,7 +105,7 @@ if (isset($_POST) && !empty($_POST)){
                         Ativo <input type="checkbox" name="ativo">
                     </div>
 
-                    
+
 
                     <div class="form-group text-center" id="inserir" id="btnSalvar">
                         <button type="submit" class="btn btn-success">
@@ -135,5 +124,6 @@ if (isset($_POST) && !empty($_POST)){
 
 </body>
 <script src="../assets/bootstrap.bundle.min.js"></script>
+<script src="../assets/sc"></script>
 
 </html>

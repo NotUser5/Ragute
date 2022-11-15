@@ -2,26 +2,25 @@
 $titulo = "Cadastro de Categorias";
 include "./uCabecalho.php";
 
-if(isset($_POST) && !empty($_POST)){
+if (isset($_POST) && !empty($_POST)) {
 
     include "./conexao.php";
     $nome = $_POST["nome"];
 
-    $query = "insert into categoria (nome) values ('$nome'); ";
-    $resultado = mysqli_query($conexao, $query);
+    if (empty($nome)) {
+        echo '<div class="alert alert-warning" style="margin-top: 1%;">
+                Existem campos vazios!
+                </div>';
+    } else {
+        $query = "insert into categoria (nome) values ('$nome'); ";
+        $resultado = mysqli_query($conexao, $query);
 
-    if($resultado){
-        header("Location: ./formCadUsuarios.php");
-        exit();
-        ?>
-            <div class="alert alert-success">
-                Cadastrado com sucesso
-            </div>
-        <?php
+        if ($resultado) {
+            header("Location: home.php?sucesso=Cadastrado com sucesso");
+            exit();
+        }
     }
-
 }
-
 ?>
 
 <div class="d-grid gap-2 d-md-flex justify-content-md-end" style="margin-top: 1%;">
@@ -40,14 +39,14 @@ if(isset($_POST) && !empty($_POST)){
         <div class="card" style="width: 80%;" id="cartao">
             <div class="card-body">
                 <h5 class="card-title text-center">Cadastro de Categorias</h5>
-                <form action="./formCadUsuarios.php" method="post" enctype="multipart/form-data">
+                <form action="./formCadCategorias.php" method="post" enctype="multipart/form-data">
                     <div class="form-group">
                         <label>
                             <h6 class="card-subtitle mb-2 text-muted">Nome</h6>
                         </label>
-                        <input type="text" name="login" class="form-control" placeholder="Digite o nome da Categoria."/>
+                        <input type="text" name="nome" class="form-control" placeholder="Digite o nome da Categoria." />
                     </div>
-                    
+
                     <div class="form-group text-center" id="inserir" id="btnSalvar">
                         <button type="submit" class="btn btn-success">
                             Salvar

@@ -1,10 +1,11 @@
 @font-face {
-    font-family: Agrandir-Tight;
-    src: url('./Agrandir-Tight.ttf');
+  font-family: Agrandir-Tight;
+  src: url('./Agrandir-Tight.ttf');
 }
+
 @font-face {
-    font-family: Agrandir-GrandLight;
-    src: url('./Agrandir-GrandLight.ttf');
+  font-family: Agrandir-GrandLight;
+  src: url('./Agrandir-GrandLight.ttf');
 }
 
 /* h1{
@@ -14,35 +15,35 @@
     font-family:Agrandir-Tight;
 } */
 
-#header{
+#header {
   background: #171717;
   color: #ff611d;
 }
 
-#menu{
-  width: 15%;
+#menu {
+  width: 90%;
 
 }
 
-h6{
+h6 {
   color: #ff611d;
   text-align: center;
 }
 
 
-#UI{
+#UI {
   color: #ff611d;
 }
 
-#inserir{
+#inserir {
   margin-top: 1.5%;
 }
 
-#btnUpImg{
+#btnUpImg {
   margin: 1.5%;
 }
 
-#dropdown{
+#dropdown {
   color: #ff611d;
   margin-right: 5%;
 }
@@ -53,52 +54,52 @@ h6{
 
 .custom-toggler.navbar-toggler {
   border-color: #ff611d;
-} 
+}
 
-#produtos{
+#produtos {
   margin-top: 6%;
 }
 
-footer{
-  color: #FF611D; 
+footer {
+  color: #FF611D;
   background-color: #171717;
   width: 100%;
   padding-top: .5rem;
 }
 
-#cont{
+#cont {
   font-size: 12px;
 }
 
-.tx_sl{
-   font-size: 10px;
+.tx_sl {
+  font-size: 10px;
 }
 
 /* #copy{
   margin-top: 7.5rem;
 } */
 
-#bread{
+#bread {
   margin-left: 2%;
 }
 
-#cadastro{
+#cadastro {
   margin-top: 5%;
   margin-bottom: 5%;
 }
 
-#cartao{
+#cartao {
   padding: 3%;
 }
 
-#btnSalvar{
+#btnSalvar {
   margin-top: 2%;
 }
 
-#campo{
+#campo {
   text-align: center;
 }
 
-body{
+body {
   background-color: #dddddd;
 }
