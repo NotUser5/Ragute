@@ -8,10 +8,10 @@ if (isset($_POST) && !empty($_POST)) {
     $login = $_POST["login"];
     $senha = $_POST["senha"];
 
-    if (empty($login) || empty($senha)) {
-        echo '<div class="alert alert-warning" style="margin-top: 1%;">
-                Existem campos vazios!
-                </div>';
+    if (empty($login)){
+        header("Location: formCadUsuarios.php?erro=Insira o Login!");
+    } else if (empty($senha)) {
+        header("Location: formCadUsuarios.php?erro=Campo senha Obrigatório\\\\\\\\\\!");
     } else {
         $query = "insert into usuarios (login, senha) values ('$login', MD5('$senha')); ";
         $resultado = mysqli_query($conexao, $query);
@@ -40,7 +40,7 @@ if (isset($_POST) && !empty($_POST)) {
         <div class="card" style="width: 80%;" id="cartao">
             <div class="card-body">
                 <h5 class="card-title text-center">Cadastro de Usuários</h5>
-                <form action="./formCadUsuarios.php" method="post" enctype="multipart/form-data" id="form-usuario">
+                <form action="./formCadUsuarios.php" id="form-usuario" method="post" enctype="multipart/form-data" >
                     <div class="form-group">
                         <label>
                             <h6 class="card-subtitle mb-2 text-muted">Login</h6>
@@ -55,17 +55,26 @@ if (isset($_POST) && !empty($_POST)) {
                         <input type="password" name="senha" class="form-control" placeholder="Digite a sua senha." />
                     </div>
 
-                    <div class="form-group text-center" id="inserir" id="btnSalvar">
+                    <div class="form-group text-center" id="inserir">
                         <button type="submit" class="btn btn-success">
                             Salvar Usuários
                         </button>
                     </div>
 
+                    <?php
+                    if (isset($_GET["erro"]) && !empty($_GET["erro"])) {
+                    ?>
+                        <div class="alert alert-warning" style="margin-top: 1%;">
+                            <strong><?php echo $_GET['erro'] ?></strong>
+                        </div>
+                    <?php
+                    }
+                    ?>
+
                 </form>
             </div>
         </div>
     </div>
-
     </body>
 
     <script src="../assets/bootstrap.bundle.min.js"></script>

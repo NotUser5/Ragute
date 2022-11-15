@@ -8,9 +8,10 @@ if (isset($_POST) && !empty($_POST)) {
     $nome = $_POST["nome"];
 
     if (empty($nome)) {
-        echo '<div class="alert alert-warning" style="margin-top: 1%;">
+        /* echo '<div class="alert alert-warning" style="margin-top: 1%;">
                 Existem campos vazios!
-                </div>';
+                </div>'; */
+        header("Location: formCadCategorias.php?erro=Insira o nome da categoria para cadastrar!");
     } else {
         $query = "insert into categoria (nome) values ('$nome'); ";
         $resultado = mysqli_query($conexao, $query);
@@ -47,11 +48,21 @@ if (isset($_POST) && !empty($_POST)) {
                         <input type="text" name="nome" class="form-control" placeholder="Digite o nome da Categoria." />
                     </div>
 
-                    <div class="form-group text-center" id="inserir" id="btnSalvar">
+                    <div class="form-group text-center" id="inserir">
                         <button type="submit" class="btn btn-success">
                             Salvar
                         </button>
                     </div>
+
+                    <?php
+                    if (isset($_GET["erro"]) && !empty($_GET["erro"])) {
+                    ?>
+                        <div class="alert alert-warning" style="margin-top: 1%;">
+                            <strong><?php echo $_GET['erro'] ?></strong>
+                        </div>
+                    <?php
+                    }
+                    ?>
 
                 </form>
             </div>

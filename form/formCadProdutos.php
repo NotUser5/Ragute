@@ -6,6 +6,7 @@ include "./conexao.php";
 $querySelect = "select ID, NOME from CATEGORIA; ";
 $resultadoSelect = mysqli_query($conexao, $querySelect);
 
+
 if (isset($_POST) && !empty($_POST)) {
     $nome = $_POST["nome"];
     $valor = $_POST["valor"];
@@ -29,10 +30,14 @@ if (isset($_POST) && !empty($_POST)) {
         $imagem = "";
     }
 
-    if (empty($nome) || empty($valor) || empty($descricao) || empty($categoria)) {
-        echo '<div class="alert alert-warning" style="margin-top: 1%;">
-                Existem campos vazios!
-                </div>';
+    if (empty($nome)){
+        header("Location: formCadProdutos.php?erro=Campo nome vazio!");
+    } else if (empty($valor)){
+        header("Location: formCadProdutos.php?erro=Campo do valor vazio!");
+    } else if (empty($descricao)){
+        header("Location: formCadProdutos.php?erro=Campo descrição vazio!");
+    } else if ($categoria == 0) {
+        header("Location: formCadProdutos.php?erro=Selecione a Categoria!");
     } else {
         $query = "insert into produtos (ID, DESCRICAO, VALOR, ATIVO, INGREDIENTES, IMG, ID_CATEGORIA) VALUES (NULL,'$nome', '$valor', '$ativo', '$descricao', '$imagem', '$categoria')";
         $resultado = mysqli_query($conexao, $query);
@@ -73,19 +78,17 @@ if (isset($_POST) && !empty($_POST)) {
                         <label>
                             <h6 class="card-subtitle mb-2 text-muted">Valor</h6>
                         </label>
-                        <input type="number" name="valor" class="form-control" placeholder="R$10,00" />
+                        <input type="text" name="valor" class="form-control" placeholder="R$10,00" />
                     </div>
 
-                    <div class="form-group" id="inserir">
-                        <label>
-                            <h6 class="card-subtitle mb-2 text-muted">Descrição</h6>
-                        </label>
-                        <input type="text" name="descricao" class="form-control" placeholder="Uma breve descrição." />
+                    <div class="input-group" id="inserir">
+                        <span class="input-group-text">Descrição</span>
+                        <textarea class="form-control" aria-label="With textarea" name="descricao" placeholder="Uma breve descrição."></textarea>
                     </div>
 
                     <div class="form-group text-center" id="inserir">
                         <select class="form-select" name="select">
-                            <option selected>Selecione a Categoria</option>
+                            <option selected value="0">Selecione a Categoria</option>
                             <?php
                             while ($linha = mysqli_fetch_array($resultadoSelect)) {
                                 echo '<option value="' . $linha["ID"] . '">' . $linha["NOME"] . '</option>';
@@ -102,16 +105,26 @@ if (isset($_POST) && !empty($_POST)) {
                     </div>
 
                     <div class="form-check text-center" id="inserir">
-                        Ativo <input type="checkbox" name="ativo">
+                        <strong>Ativo</strong> <input type="checkbox" name="ativo">
                     </div>
 
 
 
-                    <div class="form-group text-center" id="inserir" id="btnSalvar">
+                    <div class="form-group text-center" id="inserir">
                         <button type="submit" class="btn btn-success">
                             Salvar Produto
                         </button>
                     </div>
+
+                    <?php
+                    if (isset($_GET["erro"]) && !empty($_GET["erro"])) {
+                    ?>
+                        <div class="alert alert-warning" style="margin-top: 1%;">
+                            <strong><?php echo $_GET['erro'] ?></strong>
+                        </div>
+                    <?php
+                    }
+                    ?>
 
                 </form>
             </div>
