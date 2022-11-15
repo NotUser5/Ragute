@@ -39,6 +39,9 @@
                     <li class="nav-item">
                         <a id="UI" class="nav-link active" aria-current="page" href="./formCadUsuarios.php">Cadastro Usuarios</a>
                     </li>
+                    <li class="nav-item">
+                        <a id="UI" class="nav-link active text-danger" aria-current="page" href="./logout.php">Sair</a>
+                    </li>
                 </ul>
 
 

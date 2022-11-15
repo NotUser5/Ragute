@@ -18,13 +18,15 @@
                 <form action="./validacaoLogin.php" method="POST">
                 
                     <div class="form-group">
-                        <label class="d-flex">Usuario <p class="text-danger">*</p></label> 
-                        <input type="text" name="usuario" class='form-control' placeholder="Usuario">
+                        <label class="d-flex" data-toggle="tooltip" data-placement="top" title="Campo obrigatorio preencher">Usuario 
+                            <p class="text-danger" data-toggle="tooltip" data-placement="top" title="Campo obrigatorio preencher">*</p></label> 
+                        <input type="text" name="usuario" class='form-control' placeholder="Usuario" >
 
                     </div>
 
                     <div class="form-group">
-                        <label class="d-flex">Senha <p class="text-danger">*</p> </label>
+                        <label class="d-flex" data-toggle="tooltip" data-placement="top" title="Campo obrigatorio preencher">Senha 
+                            <p class="text-danger" data-toggle="tooltip" data-placement="top" title="Campo obrigatorio preencher">*</p> </label>
                         <input type="password" name="senha" class='form-control'placeholder="Senha" >
                     </div>
                     <br>
@@ -40,3 +42,11 @@
 </body>
 
 </html>
+<?php
+if(isset($_GET["erro"]) && !empty($_GET["erro"])){
+    ?>
+        <script>alert( <?php echo $_GET["erro"]; ?>) </script>
+        
+    <?php
+    }
+?>

@@ -3,7 +3,7 @@
     include('./conexao.php');
 
     if(empty($_POST['usuario']) ||  empty($_POST['senha'])){
-        header('Location: ./login.php');
+        header('Location: ./login.php?erro="Algum campo não foi prenchido"');
         exit();
     }
     $usuario = mysqli_real_escape_string($conexao ,$_POST['usuario']) ;
@@ -17,8 +17,8 @@
 
     if($row==1){
         $_SESSION['usuario'] = $usuario;
-        header('Location: formCadProdutos.php');
+        header('Location: home.php');
     }else{
-        header('Location: login.php');
+        header('Location: login.php?erro="Usuario ou Senha incorretos verefique o que foi prenchido"');
     }
 ?>

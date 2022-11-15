@@ -1,4 +1,6 @@
 <?php
+session_start();
+include "./verificador.php";
 $titulo = "Cadastro de Usuários";
 include "./uCabecalho.php";
 
