@@ -4,7 +4,7 @@
 
     <nav style="--bs-breadcrumb-divider: url(&#34;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8'%3E%3Cpath d='M2.5 0L1 1.5 3.5 4 1 6.5 2.5 8l4-4-4-4z' fill='currentColor'/%3E%3C/svg%3E&#34;);" aria-label="breadcrumb">
         <ol class="breadcrumb" id="bread">
-            <li class="breadcrumb-item"><a id="crumb" href="../home/index.php">Home</a></li>
+            <li class="breadcrumb-item"><a id="crumb" href="../../../index.php">Home</a></li>
             <li class="breadcrumb-item active" aria-current="page">Lanches</li>
         </ol>
     </nav>
@@ -78,15 +78,16 @@
                             <li>
                                 <a href="https://www.facebook.com/profile.php?id=100087576552106" target="_blank" class="btn btn-primary">
                                     <span class="sr-only">FACEBOOK</span>
-                                    <i class="fa fa-fw fa-facebook fa-2x"></i>
+                                    <!-- <span class="fa-brands fa-facebook"></span> -->
+                                    <i class="fa-brands fa-facebook "></i>
                                 </a>
                                 <a href="https://twitter.com/ragute_burger" target="_blank" class="btn btn-primary">
                                     <span class="sr-only">TWITTER</span>
-                                    <i class="fa fa-fw fa-twitter fa-2x"></i>
+                                    <i class="fa-brands fa-twitter "></i>
                                 </a>
                                 <a href="https://twitter.com/login?lang=pt" target="_blank" class="btn btn-primary">
                                     <span class="sr-only">INSTAGRAM</span>
-                                    <i class="fa fa-fw fa-instagram fa-2x"></i>
+                                    <i class="fa-brands fa-instagram "></i>
                                 </a>
 
 
