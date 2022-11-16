@@ -16,7 +16,7 @@
                 <p id="tato">Contato<br>
                 <a id="cont" href="tel:01632025980">Telefone: (16)3202-5980</a><br>
                 <a id="cont" href="http://wa.me/5516996008745">Whatsapp: (16)99600-8745</a><br>
-                <a id="mail">Email: raguteburger@gmail.com</a><br>
+                <a id="cont" href="mailto:raguteburger@gmail.comSubject=O%20que%20deseja?">Email: raguteburger@gmail.com</a><br>
                 <a class="tx_sl" id="copy">&copy; Copyright <?php echo date('Y') ?> Ragute Team</a></p>
             </div>
             <div id="conec" class="col-md-2 col-sm-12">
