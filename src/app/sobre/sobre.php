@@ -31,7 +31,7 @@
         <div class="row">
             <div class="col-md-12">
                 <div class="thumbnail">
-                    <center><img src="../../assets/img/ragute.png" class="img-responsive" style="width:auto; height:auto;" alt="imagem"></center>
+                    <center><img src="../../assets/img/ragute.png" class="img-fluid" style="width: auto; height: auto;" alt="imagem"></center>
                 </div>
             </div>
 

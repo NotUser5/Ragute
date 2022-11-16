@@ -12,12 +12,14 @@ include "../cabecalho/cabecalho.php";
         </ol>
     </nav>
 
+    
+
     <h2 class="text-center">Lanches</h2>
     <h3 class="p-3">Hamburguer</h2>
 
         <div class="row">
             <?php
-            for ($i = 0; $i < 9; $i++) {
+            for ($i = 0; $i < 27; $i++) {
             ?>
                 <div class="col-sm-12 col-md-6 col-lg-4">
                     <div class="card mb-3" style="max-width: 540px;">
