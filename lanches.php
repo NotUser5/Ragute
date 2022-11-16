@@ -3,10 +3,10 @@ $titulo = "Lanches";
 include "./cabacalho.php";
 
 include "./form/conexao.php";
-$querySelect = "select ID, DESCRICAO, VALOR, ATIVO, IMG, ID_CATEGORIA, INGREDIENTES from PRODUTOS ORDER BY 1; ";
-$querySelect2 = "select ID, DESCRICAO, VALOR, ATIVO, IMG, ID_CATEGORIA, INGREDIENTES from PRODUTOS ORDER BY 1; ";
-$querySelect3 = "select ID, DESCRICAO, VALOR, ATIVO, IMG, ID_CATEGORIA, INGREDIENTES from PRODUTOS ORDER BY 1; ";
-$querySelect4 = "select ID, DESCRICAO, VALOR, ATIVO, IMG, ID_CATEGORIA, INGREDIENTES from PRODUTOS ORDER BY 1; ";
+$querySelect = "select ID, DESCRICAO, VALOR, ATIVO, IMG, ID_CATEGORIA, INGREDIENTES from PRODUTOS ORDER BY 3; ";
+$querySelect2 = "select ID, DESCRICAO, VALOR, ATIVO, IMG, ID_CATEGORIA, INGREDIENTES from PRODUTOS ORDER BY 3; ";
+$querySelect3 = "select ID, DESCRICAO, VALOR, ATIVO, IMG, ID_CATEGORIA, INGREDIENTES from PRODUTOS ORDER BY 3; ";
+$querySelect4 = "select ID, DESCRICAO, VALOR, ATIVO, IMG, ID_CATEGORIA, INGREDIENTES from PRODUTOS ORDER BY 3; ";
 $resultadoSelect = mysqli_query($conexao, $querySelect);
 $resultadoSelect2 = mysqli_query($conexao, $querySelect2);
 $resultadoSelect3 = mysqli_query($conexao, $querySelect3);

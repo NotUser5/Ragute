@@ -32,23 +32,28 @@ if (isset($_POST) && !empty($_POST)) {
         $imagem = "";
     }
 
-    if (empty($nome)){
-        header("Location: formCadProdutos.php?erro=Campo nome vazio!");
-    } else if (empty($valor)){
-        header("Location: formCadProdutos.php?erro=Campo do valor vazio!");
-    } else if (empty($descricao)){
-        header("Location: formCadProdutos.php?erro=Campo descrição vazio!");
-    } else if ($categoria == 0) {
-        header("Location: formCadProdutos.php?erro=Selecione a Categoria!");
-    } else {
-        $query = "insert into produtos (ID, DESCRICAO, VALOR, ATIVO, INGREDIENTES, IMG, ID_CATEGORIA) VALUES (NULL,'$nome', '$valor', '$ativo', '$descricao', '$imagem', '$categoria')";
-        $resultado = mysqli_query($conexao, $query);
+    // if (empty($nome)){
+    //     header("Location: formCadProdutos.php?erro=Campo nome vazio!");
+    // } else if (empty($valor)){
+    //     header("Location: formCadProdutos.php?erro=Campo do valor vazio!");
+    // } else if (empty($descricao)){
+    //     header("Location: formCadProdutos.php?erro=Campo descrição vazio!");
+    // } else {
+    //     $query = "insert into produtos (ID, DESCRICAO, VALOR, ATIVO, INGREDIENTES, IMG, ID_CATEGORIA) VALUES (NULL,'$nome', '$valor', '$ativo', '$descricao', '$imagem', '$categoria')";
+    //     $resultado = mysqli_query($conexao, $query);
 
-        if ($resultado) {
-            header("Location: tabProdutos.php?sucesso=Cadastrado com sucesso");
-            exit();
-        }
-    }
+    //     if ($resultado) {
+    //         header("Location: tabProdutos.php?sucesso=Cadastrado com sucesso");
+    //         exit();
+    //     }
+    // }
+  //  $_SESSION['nome'] = $nome;
+    // if (isset($_GET["erro"]) && !empty($_GET["erro"])){
+    //     $a = $_POST["nome"];
+    //     $b = $_POST["valor"];
+    //     $c = $_POST["descricao"];
+    //     $d = $_POST["select"];
+    // }
 }
 ?>
 
@@ -73,24 +78,24 @@ if (isset($_POST) && !empty($_POST)) {
                         <label>
                             <h6 class="card-subtitle mb-2 text-muted">Nome</h6>
                         </label>
-                        <input type="text" name="nome" class="form-control" placeholder="Você digita o nome do produto aqui." minlength="2" maxlength="30"/>
+                        <input type="text" name="nome" class="form-control" placeholder="Você digita o nome do produto aqui." minlength="2" maxlength="30" required/>
                     </div>
 
                     <div class="form-group" id="inserir">
                         <label>
                             <h6 class="card-subtitle mb-2 text-muted">Valor</h6>
                         </label>
-                        <input type="number" name="valor" class="form-control" placeholder="R$10,00" min="0" max="150" step=".01"/>
+                        <input type="number" name="valor" class="form-control" placeholder="R$10,00" min="0" max="150" step=".01" required/>
                     </div>
 
                     <div class="input-group" id="inserir">
                         <span class="input-group-text">Descrição</span>
-                        <textarea class="form-control" aria-label="With textarea" name="descricao" placeholder="Uma breve descrição." minlength="0" maxlength="255"></textarea>
+                        <textarea class="form-control" aria-label="With textarea" name="descricao" placeholder="Uma breve descrição." minlength="0" maxlength="255" required></textarea>
                     </div>
 
                     <div class="form-group text-center" id="inserir">
-                        <select class="form-select" name="select">
-                            <option selected value="0">Selecione a Categoria</option>
+                        <select class="form-select" name="select" required> 
+                            <option selected value="">Selecione a Categoria</option>
                             <?php
                             while ($linha = mysqli_fetch_array($resultadoSelect)) {
                                 echo '<option value="' . $linha["ID"] . '">' . $linha["NOME"] . '</option>';
@@ -98,12 +103,12 @@ if (isset($_POST) && !empty($_POST)) {
                             ?>
                         </select>
                     </div>
-
+                        
                     <div class="form-group text-center" id="inserir">
                         <label>
                             <h6 class="card-subtitle mb-2 text-muted">Carregar Imagem</h6>
                         </label>
-                        <input type="file" name="imagem" id="upImg" accept="image/*" class="form-control form-control-sm" />
+                        <input type="file" name="imagem" id="upImg" accept="image/*" class="form-control form-control-sm" required/>
                     </div>
 
                     <div class="form-check text-center" id="inserir">

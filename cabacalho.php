@@ -34,10 +34,10 @@
                         <a id="UI" class="nav-link active" aria-current="page" href="./lanches.php">Lanches</a>
                     </li>
                     <li class="nav-item">
-                        <a id="UI" class="nav-link active" aria-current="page" href="#">Porções</a>
+                        <a id="UI" class="nav-link active" aria-current="page" href="./porcoes.php">Porções</a>
                     </li>
                     <li class="nav-item">
-                        <a id="UI" class="nav-link active" aria-current="page" href="#">Bebidas</a>
+                        <a id="UI" class="nav-link active" aria-current="page" href="./bebidas.php">Bebidas</a>
                     </li>
                     <li class="nav-item">
                         <a id="UI" class="nav-link active" aria-current="page" href="#">Sobre</a>
