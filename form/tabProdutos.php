@@ -100,7 +100,7 @@ if (isset($_GET["sucesso"]) && !empty($_GET["sucesso"])) {
 					}
 					?>
 				</td>
-				<td><img src=".<?php echo $linha["IMG"]; ?>" width="150" height="30"></td>
+				<td><img src=".<?php echo $linha["IMG"]; ?>" width="60" height="60"></td>
 				<td>
 					<?php
 						$queryCat="select ID,NOME from categoria";

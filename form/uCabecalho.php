@@ -31,7 +31,7 @@
                         <a id="UI" class="nav-link active" aria-current="page" href="./home.php">Inicio</a>
                     </li>
                     <li class="nav-item">
-                        <a id="UI" class="nav-link active" aria-current="page" href="./formCadProdutos.php">Cadastro Produtos</a>
+                        <a id="UI" class="nav-link active" aria-current="page" href="./tabProdutos.php">Cadastro Produtos</a>
                     </li>
                     <li class="nav-item">
                         <a id="UI" class="nav-link active" aria-current="page" href="./formCadCategorias.php">Cadastro Categorias</a>

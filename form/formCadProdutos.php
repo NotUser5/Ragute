@@ -80,12 +80,12 @@ if (isset($_POST) && !empty($_POST)) {
                         <label>
                             <h6 class="card-subtitle mb-2 text-muted">Valor</h6>
                         </label>
-                        <input type="number" name="valor" class="form-control" placeholder="R$10,00" min="0" max="100" step=".01"/>
+                        <input type="number" name="valor" class="form-control" placeholder="R$10,00" min="0" max="150" step=".01"/>
                     </div>
 
                     <div class="input-group" id="inserir">
                         <span class="input-group-text">Descrição</span>
-                        <textarea class="form-control" aria-label="With textarea" name="descricao" placeholder="Uma breve descrição." minlength="6" maxlength="100"></textarea>
+                        <textarea class="form-control" aria-label="With textarea" name="descricao" placeholder="Uma breve descrição." minlength="0" maxlength="255"></textarea>
                     </div>
 
                     <div class="form-group text-center" id="inserir">
