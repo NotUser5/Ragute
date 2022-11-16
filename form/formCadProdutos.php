@@ -108,7 +108,7 @@ if (isset($_POST) && !empty($_POST)) {
                         <label>
                             <h6 class="card-subtitle mb-2 text-muted">Carregar Imagem</h6>
                         </label>
-                        <input type="file" name="imagem" id="upImg" accept="image/*" class="form-control form-control-sm" required/>
+                        <input type="file" name="imagem" id="upImg" accept="image/*" class="form-control form-control-sm" required />
                     </div>
 
                     <div class="form-check text-center" id="inserir">

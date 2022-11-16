@@ -30,14 +30,14 @@
                     <div class="form-group">
                         <label class="d-flex" data-toggle="tooltip" data-placement="top" title="Campo obrigatorio preencher">Usuario 
                             <p class="text-danger" data-toggle="tooltip" data-placement="top" title="Campo obrigatorio preencher">*</p></label> 
-                        <input type="text" name="usuario" class='form-control' placeholder="Usuario" >
+                        <input type="text" name="usuario" class='form-control' placeholder="Usuario" required />
 
                     </div>
 
                     <div class="form-group">
                         <label class="d-flex" data-toggle="tooltip" data-placement="top" title="Campo obrigatorio preencher">Senha 
                             <p class="text-danger" data-toggle="tooltip" data-placement="top" title="Campo obrigatorio preencher">*</p> </label>
-                        <input type="password" name="senha" class='form-control'placeholder="Senha" >
+                        <input type="password" name="senha" class='form-control'placeholder="Senha" required />
                     </div>
                     <br>
                     <div class="form-group text-center">
