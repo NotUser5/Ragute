@@ -7,7 +7,10 @@
   font-family: Agrandir-GrandLight;
   src: url('./Agrandir-GrandLight.ttf');
 }
-
+@font-face {
+  font-family: Agrandir-TextBold;
+  src: url('../assets/Agrandir-TextBold.otf');
+}
 /* h1{
     font-family:Agrandir-GrandLight;
 } */
@@ -18,6 +21,7 @@
 #header {
   background: #171717;
   color: #ff611d;
+  font-family: 'Agrandir-TextBold';
 }
 
 #menu {
@@ -101,11 +105,26 @@ footer {
 }
 
 body {
-  background-color: #dddddd;
+  background-color: #d0d0d0;
+  font-family: 'Agrandir-TextBold';
 }
 
 #btn-rag{
-  font-weight: bold;
+  font-family: 'Agrandir-TextBold';
   color: #ffffff;
   background-color: #ff611d;;
+}
+.container {
+  background-color: #f0f0f0;
+  height: 100%;
+  box-shadow: 5px 5px 15px;
+  width: 85%;
+  border-radius: 10px;
+  padding-top: 1px;
+  padding-bottom: 15px;
+  margin-top: 25px;
+}
+.btn-dark{
+  color:#ff611d;
+  font-family: 'Agrandir-TextBold';
 }

@@ -10,6 +10,24 @@
     <link rel="stylesheet" href="./uStyle.css">
 </head>
 
+<div class="modal fade" id="confirmDel" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Confirmação de Exclusão</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body text-center">
+        Tem certeza que deseja excluir?
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-light" data-bs-dismiss="modal">Cancelar</button>
+        <button type="button" class="btn btn-danger" onClick="excluirOpcao()">Excluir</button>
+      </div>
+    </div>
+  </div>
+</div>
+
 <body>
 
     <nav id="header" class="navbar navbar-expand-lg d-flex justify-content-around">
@@ -31,7 +49,7 @@
                         <a id="UI" class="nav-link active" aria-current="page" href="./home.php">Inicio</a>
                     </li>
                     <li class="nav-item">
-                        <a id="UI" class="nav-link active" aria-current="page" href="./tabProdutos.php">Cadastro Produtos</a>
+                        <a id="UI" class="nav-link active" aria-current="page" href="./formCadProdutos.php">Cadastro Produtos</a>
                     </li>
                     <li class="nav-item">
                         <a id="UI" class="nav-link active" aria-current="page" href="./formCadCategorias.php">Cadastro Categorias</a>
@@ -48,4 +66,4 @@
             </div>
         </div>
     </nav>
-    <div class="container-fluid">
+    <div class="container">

@@ -6,6 +6,10 @@
     font-family: Agrandir-GrandLight;
     src: url('./Agrandir-GrandLight.ttf');
 }
+@font-face {
+  font-family: Agrandir-TextBold;
+  src: url('./Agrandir-TextBold.otf');
+}
 
 /* h1{
     font-family:Agrandir-GrandLight;
@@ -33,6 +37,15 @@ h6{
   height: 100%;
   box-shadow: 0px 0px 75px;
   padding-top: 74px;
+}
+#top-card {
+  background-color: #f0f0f0;
+  height: fit-content;
+  box-shadow: 5px 5px 15px;
+  border-radius: 10px;
+  padding-bottom: 5px;
+  padding-top: 5px;
+  font-family: 'Agrandir-TextBold';
 }
 
 #UI{
@@ -89,4 +102,11 @@ footer{
 }
 #bg{
   background-color: #c0c0c0;
+}
+#btnEntrar h5{
+  margin-top: auto;
+  margin-bottom: auto;
+}
+#formUlário{
+  margin-bottom: 10px;
 }

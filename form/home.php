@@ -9,14 +9,14 @@ $user = $_SESSION['usuario'];
     <div class="offset-2 col-md-8">
         <div class="card text-center" style="margin: 8%;">
             <div class="card-header">
-                <h6>Seja Bem Vindo <strong> <?php echo ucfirst($user) ?> </strong> ao Sistema Ragute!</h6>
+                <strong>Seja Bem Vindo <?php echo ucfirst($user) ?> ao Sistema Ragute!</strong>
             </div>
             <div class="card-body">
                 <h5 class="card-title">Painel Administrativo</h5>
                 <div class="d-grid gap-2 col-6 mx-auto">
                     <a class="btn btn-dark" href="./tabProdutos.php" type="submit">Produtos</a>
-                    <a class="btn btn-dark" href="./tabUsuarios" type="submit">Usuários</a>
-                    <a class="btn btn-dark" href="./tabCategorias" type="submit">Categorias</a>
+                    <a class="btn btn-dark" href="./tabUsuarios.php" type="submit">Usuários</a>
+                    <a class="btn btn-dark" href="./tabCategorias.php" type="submit">Categorias</a>
                     <a class="btn" href="../index.php" type="submit" id="btn-rag">Ragute</a>
                 </div>
             </div>

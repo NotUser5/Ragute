@@ -2,11 +2,11 @@
 session_start();
 include "./verificador.php";
 $titulo = "Cadastro de Usuários";
+include "./conexao.php";
 include "./uCabecalho.php";
 
 if (isset($_POST) && !empty($_POST)) {
-
-    include "./conexao.php";
+    $id = $_POST["id"];
     $login = $_POST["login"];
     $senha = $_POST["senha"];
 
@@ -15,14 +15,21 @@ if (isset($_POST) && !empty($_POST)) {
     } else if (empty($senha)) {
         header("Location: formCadUsuarios.php?erro=Campo senha Obrigatório!");
     } else {
-        $query = "insert into usuarios (login, senha) values ('$login', MD5('$senha')); ";
+        $query = "update usuarios set login='$login', senha='$senha' where id=$id; ";
         $resultado = mysqli_query($conexao, $query);
-
         if ($resultado) {
-            header("Location: tabUsuarios.php?sucesso=Cadastrado com sucesso");
+            header("Location: tabUsuarios.php?sucesso=Editado com sucesso");
             exit();
         }
     }
+}
+if(isset($_GET["id"]) && !empty($_GET["id"])){
+    $query="select id,login from usuarios where id=".$_GET["id"];
+    $resultado = mysqli_query($conexao,$query);
+    $dados = mysqli_fetch_array($resultado);
+
+    $id = $dados["id"];
+    $login = $dados["login"];
 }
 ?>
 
@@ -43,6 +50,12 @@ if (isset($_POST) && !empty($_POST)) {
             <div class="card-body">
                 <h5 class="card-title text-center">Cadastro de Usuários</h5>
                 <form action="./formCadUsuarios.php" id="form-usuario" method="post" enctype="multipart/form-data" >
+                    <div class="form-group">
+                        <label>
+                            <h6 class="card-subtitle mb-2 text-muted">ID</h6>
+                        </label>
+                        <input type="text" name="login" id="login" class="form-control" placeholder="Digite seu login." minlength="6" maxlength="10" value="<?php echo $id; ?>">
+                    </div>    
                     <div class="form-group">
                         <label>
                             <h6 class="card-subtitle mb-2 text-muted">Login</h6>
