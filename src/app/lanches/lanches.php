@@ -12,10 +12,8 @@ include "../cabecalho/cabecalho.php";
         </ol>
     </nav>
 
-    
-
     <h2 class="text-center">Lanches</h2>
-    <h3 class="p-3">Hamburguer</h2>
+    <h3 class="p-3" id="hamburger">Hamburguer</h2>
 
         <div class="row">
             <?php
@@ -42,12 +40,11 @@ include "../cabecalho/cabecalho.php";
 
             ?>
         </div>
-
-        <!-- <h3 class="p-3">Artesanais</h2>
+        <h3 class="p-3" id="naturais">Naturais</h2>
 
         <div class="row">
                 <?php
-                for ($i = 0; $i < 3; $i++) {
+                for ($i = 0; $i < 9; $i++) {
                 ?>
                     <div class="col-sm-12 col-md-6 col-lg-4">
                         <div class="card mb-3 " style="max-width: 540px;">
@@ -70,11 +67,11 @@ include "../cabecalho/cabecalho.php";
 
                 ?>
             </div>
-        <h3 class="p-3">Frango</h2>
+        <h3 class="p-3" id="frango">Frango</h2>
 
         <div class="row">
                 <?php
-                for ($i = 0; $i < 3; $i++) {
+                for ($i = 0; $i < 9; $i++) {
                 ?>
                     <div class="col-sm-12 col-md-6 col-lg-4">
                         <div class="card mb-3 " style="max-width: 540px;">
@@ -97,11 +94,11 @@ include "../cabecalho/cabecalho.php";
 
                 ?>
         </div>
-        <h3 class="p-3">Hot-Dogs</h2>
+        <h3 class="p-3" id="hotdog">Hot-Dogs</h2>
 
         <div class="row">
                 <?php
-                for ($i = 0; $i < 3; $i++) {
+                for ($i = 0; $i < 9; $i++) {
                 ?>
                     <div class="col-sm-12 col-md-6 col-lg-4">
                         <div class="card mb-3 " style="max-width: 540px;">

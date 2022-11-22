@@ -32,17 +32,31 @@
 
             <div class="collapse navbar-collapse " id="navbarNavDropdown">
                 <ul id="menu" class="navbar-nav me-auto mb-2 mb-lg-0 d-flex justify-content-around" >
-                    <li class="nav-item">
+                <li class="nav-item">
                         <a id="UI" class="nav-link active" aria-current="page" href="../home/home.php">Home</a>
                     </li>
-                    <li class="nav-item">
-                        <a id="UI" class="nav-link active" aria-current="page" href="../lanches/lanches.php">Lanches</a>
+                    <li class="nav-item dropdown">
+                        <a id="UI" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-current="page" href="../lanches/lanches.php">Lanches</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="../lanches/lanches.php#hamburger">Hambúrgueres</a></li>
+                            <li><a class="dropdown-item" href="../lanches/lanches.php#naturais">Naturais</a></li>
+                            <li><a class="dropdown-item" href="../lanches/lanches.php#frango">Frango</a></li>
+                            <li><a class="dropdown-item" href="../lanches/lanches.php#hotdog">Hot-dogs</a></li>
+                        </ul>
                     </li>
-                    <li class="nav-item">
-                        <a id="UI" class="nav-link active" aria-current="page" href="#">Porções</a>
+                    <li class="nav-item dropdown">
+                        <a id="UI" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-current="page" href="#">Porções</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Quentes</a></li>
+                            <li><a class="dropdown-item" href="#">Frias</a></li>
+                        </ul>
                     </li>
-                    <li class="nav-item">
-                        <a id="UI" class="nav-link active" aria-current="page" href="#">Bebidas</a>
+                    <li class="nav-item dropdown">
+                        <a id="UI" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-current="page" href="#">Bebidas</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Alcoólicas</a></li>
+                            <li><a class="dropdown-item" href="#">Não Alcoólicas</a></li>
+                        </ul>
                     </li>
                     <li class="nav-item">
                         <a id="UI" class="nav-link active" aria-current="page" href="../sobre/sobre.php">Sobre</a>
@@ -54,3 +68,4 @@
         </div>
     </nav>
     <div class="container-fluid">
+

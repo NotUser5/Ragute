@@ -23,15 +23,15 @@
                 <p> Nos encontre nas redes sociais</p>
                 <ul class="list-inline">
                     <li>
-                        <a href="https://www.facebook.com/profile.php?id=100087576552106" target="_blank" class="btn" id="rede">
+                        <a href="https://www.facebook.com/profile.php?id=100087576552106" target="_blank" id="rede" class="btn">
                             <span class="sr-only">FACEBOOK</span>
                             <i class="fa-brands fa-facebook "></i>
                         </a>
-                        <a href="https://twitter.com/ragute_burger" target="_blank" class="btn" id="rede">
+                        <a href="https://twitter.com/ragute_burger" target="_blank" id="rede" class="btn">
                             <span class="sr-only">TWITTER</span>
                             <i class="fa-brands fa-twitter "></i>
                         </a>
-                        <a href="https://twitter.com/login?lang=pt" target="_blank" class="btn" id="rede">
+                        <a href="https://twitter.com/login?lang=pt" target="_blank" id="rede" class="btn">
                             <span class="sr-only">INSTAGRAM</span>
                             <i class="fa-brands fa-instagram "></i>
                         </a>
