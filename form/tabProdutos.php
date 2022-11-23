@@ -110,10 +110,22 @@
 						?>
 					</td>
 					<td><a class="btn btn-warning" href="./editProd.php?id=<?php echo $linha["id"];?>">Editar</a></td>
-					<td><a class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#confirmDel">Excluir</a></td>
+					<td>
+						<?php
+						if($linha["ATIVO"]==1){
+						?>
+						<a class="btn btn-danger" href="./inativarProd.php?id=<?php echo $linha["id"];?>">Inativar</a>
+						<?php
+						}else{
+						?>
+						<a class="btn btn-success" href="./ativarProd.php?id=<?php echo $linha["id"];?>">Ativar</a>
+						<?php
+						}
+						?>
+					</td>
 					<script type="text/javascript">
 	                    function excluirOpcao(){
-							location.href="./delProd.php?id=<?php echo $linha["id"];?>"
+							location.href="./inativarProd.php?id=<?php echo $linha["id"];?>";
 	                    }
 	                </script>
 				</tr>
