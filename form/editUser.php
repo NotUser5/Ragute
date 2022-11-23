@@ -1,21 +1,18 @@
 <?php
 session_start();
 include "./verificador.php";
-$titulo = "Cadastro de Usuários";
+$titulo = "Edição de Usuários";
 include "./conexao.php";
 include "./uCabecalho.php";
 
 if (isset($_POST) && !empty($_POST)) {
     $id = $_POST["id"];
     $login = $_POST["login"];
-    $senha = $_POST["senha"];
 
     if (empty($login)){
-        header("Location: formCadUsuarios.php?erro=Insira o Login!");
-    } else if (empty($senha)) {
-        header("Location: formCadUsuarios.php?erro=Campo senha Obrigatório!");
-    } else {
-        $query = "update usuarios set login='$login', senha='$senha' where id=$id; ";
+        header("Location: editUser.php?erro=Insira o Login!");
+    }else {
+        $query = "update usuarios set login='$login' where id=$id; ";
         $resultado = mysqli_query($conexao, $query);
         if ($resultado) {
             header("Location: tabUsuarios.php?sucesso=Editado com sucesso");
@@ -49,27 +46,19 @@ if(isset($_GET["id"]) && !empty($_GET["id"])){
         <div class="card" style="width: 80%;" id="cartao">
             <div class="card-body">
                 <h5 class="card-title text-center">Cadastro de Usuários</h5>
-                <form action="./formCadUsuarios.php" id="form-usuario" method="post" enctype="multipart/form-data" >
+                <form action="./editUser.php" id="form-usuario" method="post" enctype="multipart/form-data" >
                     <div class="form-group">
                         <label>
                             <h6 class="card-subtitle mb-2 text-muted">ID</h6>
                         </label>
-                        <input type="text" name="login" id="login" class="form-control" placeholder="Digite seu login." minlength="6" maxlength="10" value="<?php echo $id; ?>">
+                        <input type="text" name="id" id="id" class="form-control" placeholder="Digite seu login." readonly value="<?php echo $id; ?>">
                     </div>    
                     <div class="form-group">
                         <label>
                             <h6 class="card-subtitle mb-2 text-muted">Login</h6>
                         </label>
-                        <input type="text" name="login" id="login" class="form-control" placeholder="Digite seu login." minlength="6" maxlength="10">
+                        <input type="text" name="login" id="login" class="form-control" placeholder="Digite seu login." minlength="6" maxlength="10" value="<?php echo $login; ?>">
                     </div>
-
-                    <div class="form-group" id="inserir">
-                        <label>
-                            <h6 class="card-subtitle mb-2 text-muted">Senha</h6>
-                        </label>
-                        <input type="password" name="senha" class="form-control" placeholder="Digite a sua senha." minlength="6" maxlength="10"/>
-                    </div>
-
                     <div class="form-group text-center" id="inserir">
                         <button type="submit" class="btn btn-success">
                             Salvar Usuários

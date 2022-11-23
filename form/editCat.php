@@ -1,27 +1,33 @@
 <?php
 session_start();
 include "./verificador.php";
-$titulo = "Cadastro de Categorias";
+$titulo = "Edição de Categorias";
 include "./conexao.php";
 include "./uCabecalho.php";
 
 if (isset($_POST) && !empty($_POST)) {
+    $id=$_POST["id"];
     $nome = $_POST["nome"];
 
     if (empty($nome)) {
-        /* echo '<div class="alert alert-warning" style="margin-top: 1%;">
-                Existem campos vazios!
-                </div>'; */
-        header("Location: formCadCategorias.php?erro=Insira o nome da categoria para cadastrar!");
+        header("Location: editCat.php?erro=Insira o nome da categoria para cadastrar!");
     } else {
-        $query = "insert into categoria (nome) values ('$nome'); ";
+        $query = "update categoria set nome='$nome' where id=$id;";
         $resultado = mysqli_query($conexao, $query);
 
         if ($resultado) {
-            header("Location: tabCategorias.php?sucesso=Cadastrado com sucesso");
+            header("Location: tabCategorias.php?sucesso=Editado com sucesso");
             exit();
         }
     }
+}
+if(isset($_GET["id"]) && !empty($_GET["id"])){
+    $query="select id,nome from categoria where id=".$_GET["id"];
+    $resultado = mysqli_query($conexao,$query);
+    $dados = mysqli_fetch_array($resultado);
+
+    $id = $dados["id"];
+    $nome = $dados["nome"];
 }
 ?>
 
@@ -41,12 +47,18 @@ if (isset($_POST) && !empty($_POST)) {
         <div class="card" style="width: 80%;" id="cartao">
             <div class="card-body">
                 <h5 class="card-title text-center">Cadastro de Categorias</h5>
-                <form action="./formCadCategorias.php" method="post" enctype="multipart/form-data">
+                <form action="./editCat.php" method="post" enctype="multipart/form-data">
+                    <div class="form-group">
+                        <label>
+                            <h6 class="card-subtitle mb-2 text-muted">ID</h6>
+                        </label>
+                        <input type="text" name="id" id="login" class="form-control" placeholder="Digite seu login." readonly value="<?php echo $id; ?>">
+                    </div>
                     <div class="form-group">
                         <label>
                             <h6 class="card-subtitle mb-2 text-muted">Nome</h6>
                         </label>
-                        <input type="text" name="nome" class="form-control" placeholder="Digite o nome da Categoria." minlength="1" maxlength="10"/>
+                        <input type="text" name="nome" class="form-control" placeholder="Digite o nome da Categoria." minlength="1" maxlength="10" value="<?php echo $nome;?>"/>
                     </div>
 
                     <div class="form-group text-center" id="inserir">
