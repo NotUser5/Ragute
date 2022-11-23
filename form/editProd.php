@@ -12,6 +12,7 @@
     if (isset($_POST) && !empty($_POST)) {
         $id=$_POST["id"];
         $ingredientes = $_POST["ingredientes"];
+
         $valor = $_POST["valor"];
         $nome = $_POST["nome"];
         $categoria = $_POST["select"];
@@ -104,7 +105,7 @@
 
                         <div class="input-group" id="inserir">
                             <span class="input-group-text">Descrição</span>
-                            <textarea class="form-control" aria-label="With textarea" name="descricao" placeholder="Uma breve descrição." minlength="6" maxlength="100"><?php echo $ingredientes; ?></textarea>
+                            <textarea class="form-control" aria-label="With textarea" name="ingredientes" placeholder="Uma breve descrição." minlength="6" maxlength="100"><?php echo $ingredientes; ?></textarea>
                         </div>
 
                         <div class="form-group text-center" id="inserir">
@@ -123,15 +124,7 @@
                         </div>
 
                         <div class="form-check text-center" id="inserir">
-                            <strong>Ativo <?php
-                                if($ativo == 1){?>
-                                        <input type="checkbox" name="ativo" class="form-check" checked />
-                                    <?php
-                                }else{?>
-                                        <input type="checkbox" name="ativo" class="form-check" />
-                                    <?php
-                                } ?>
-                            </strong> 
+                            <strong>Ativo</strong> <input type="checkbox" name="ativo" checked>
                         </div>
 
                         <div class="form-group text-center" id="inserir">
