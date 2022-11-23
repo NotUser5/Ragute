@@ -37,7 +37,7 @@ if (isset($_POST) && !empty($_POST)) {
     </ol>
 </nav>
 
-<div class="row">
+<div class="row" id="bottomCard">
     <div class="offset-4 col-md-6">
         <div class="card" style="width: 80%;" id="cartao">
             <div class="card-body">
