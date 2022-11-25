@@ -3,8 +3,8 @@ $titulo = "Porções";
 include "./cabacalho.php";
 
 include "./form/conexao.php";
-$querySelect = "select ID, DESCRICAO, VALOR, ATIVO, IMG, ID_CATEGORIA, INGREDIENTES from PRODUTOS ORDER BY 3; ";
-$querySelect2 = "select ID, DESCRICAO, VALOR, ATIVO, IMG, ID_CATEGORIA, INGREDIENTES from PRODUTOS ORDER BY 3; ";
+$querySelect = "select ID, NOME, VALOR, ATIVO, IMG, ID_CATEGORIA, INGREDIENTES from PRODUTOS ORDER BY 3; ";
+$querySelect2 = "select ID, NOME, VALOR, ATIVO, IMG, ID_CATEGORIA, INGREDIENTES from PRODUTOS ORDER BY 3; ";
 $resultadoSelect = mysqli_query($conexao, $querySelect);
 $resultadoSelect2 = mysqli_query($conexao, $querySelect2);
 
@@ -46,7 +46,7 @@ $resultadoSelect2 = mysqli_query($conexao, $querySelect2);
                             </div>
                             <div class="col-sm-11 col-md-5">
                                 <div class="card-body">
-                                    <h5 class="card-title text-center"><?php echo $linha["DESCRICAO"]; ?></h5>
+                                    <h5 class="card-title text-center"><?php echo $linha["NOME"]; ?></h5>
                                     <p class="card-text text-center"><?php echo $linha["INGREDIENTES"]; ?></p>
                                     <h6 class="card-title text-center">R$<?php echo $linha["VALOR"] ?></h6>
                                 </div>
@@ -76,7 +76,7 @@ $resultadoSelect2 = mysqli_query($conexao, $querySelect2);
                             </div>
                             <div class="col-sm-11 col-md-5">
                                 <div class="card-body">
-                                    <h5 class="card-title text-center"><?php echo $linha2["DESCRICAO"]; ?></h5>
+                                    <h5 class="card-title text-center"><?php echo $linha2["NOME"]; ?></h5>
                                     <p class="card-text text-center"><?php echo $linha2["INGREDIENTES"]; ?></p>
                                     <h6 class="card-title text-center">R$<?php echo $linha2["VALOR"] ?></h6>
                                 </div>
