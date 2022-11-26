@@ -2,7 +2,7 @@
 
 <div class="container">
     <div class="row">
-        <div class="col-md-6 offset-md-3 col-sm-12" > <h4>Bem Vindo ao cardápio do Ragute</h4>  </div>
+        <div class="col-md-6 offset-md-4 col-sm-12"><h4>Bem Vindo ao cardápio do Ragute</h4></div>
     </div>
 <h1 id="categoria" > Promoções</h1>
     <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
