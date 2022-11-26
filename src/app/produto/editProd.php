@@ -105,7 +105,7 @@
 
                         <div class="input-group" id="inserir">
                             <span class="input-group-text">Descrição</span>
-                            <textarea class="form-control" aria-label="With textarea" name="ingredientes" placeholder="Uma breve descrição." minlength="6" maxlength="100"><?php echo $ingredientes; ?></textarea>
+                            <textarea class="form-control" aria-label="With textarea" name="ingredientes" placeholder="Uma breve descrição." minlength="6" maxlength="200"><?php echo $ingredientes; ?></textarea>
                         </div>
 
                         <div class="form-group text-center" id="inserir">

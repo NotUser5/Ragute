@@ -60,7 +60,7 @@ $resultadoSelect2 = mysqli_query($conexao, $querySelect2);
         ?>
     </div>
 
-    <h3 class="p-3" id="fria">Porções Frias</h3>
+    <h3 class="p-3" id="frio">Porções Frias</h3>
 
     <div class="row">
         <?php

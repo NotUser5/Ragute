@@ -81,7 +81,7 @@ if (isset($_POST) && !empty($_POST)) {
                         <label>
                             <h6 class="card-subtitle mb-2 text-muted">Nome</h6>
                         </label>
-                        <input type="text" name="nome" class="form-control" placeholder="Você digita o nome do produto aqui." minlength="2" maxlength="30" required/>
+                        <input type="text" name="nome" class="form-control" placeholder="Você digita o nome do produto aqui." minlength="2" maxlength="50" required/>
                     </div>
 
                     <div class="form-group" id="inserir">
