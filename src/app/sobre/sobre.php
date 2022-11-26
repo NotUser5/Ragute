@@ -85,7 +85,7 @@
                                     <span class="sr-only">TWITTER</span>
                                     <i class="fa-brands fa-twitter "></i>
                                 </a>
-                                <a href="https://twitter.com/login?lang=pt" target="_blank" class="btn btn-primary">
+                                <a href="https://www.instagram.com/ragute_burger/" target="_blank" class="btn btn-primary">
                                     <span class="sr-only">INSTAGRAM</span>
                                     <i class="fa-brands fa-instagram "></i>
                                 </a>
