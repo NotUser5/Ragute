@@ -15,9 +15,9 @@ $user = $_SESSION['usuario'];
                 <h5 class="card-title">Painel Administrativo</h5>
                 <div class="d-grid gap-2 col-6 mx-auto">
                     <a class="btn btn-dark" href="../produto/tabProdutos.php" type="submit">Produtos</a>
-                    <a class="btn btn-dark" href="../usuario/tabUsuarios.php" type="submit">Usuários</a>
                     <a class="btn btn-dark" href="../categoria/tabCategorias.php" type="submit">Categorias</a>
-                    <a class="btn" href="../../app/home/home.php" type="submit" id="btn-rag">Ragute</a>
+                    <a class="btn btn-dark" href="../usuario/tabUsuarios.php" type="submit">Usuários</a>
+                    <a class="btn" href="../../app/home/home.php" type="submit" id="btn-rag">Visualizar Ragute</a>
                 </div>
             </div>
             <div class="card-footer text-muted">
@@ -40,7 +40,7 @@ $user = $_SESSION['usuario'];
                     } else if (week == "5") {
                         document.write(" Sexta-Feira")
                     } else {
-                        document.write(" Sabado")
+                        document.write(" Sábado")
                     }
                 </script>
             </div>
