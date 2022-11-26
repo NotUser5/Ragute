@@ -45,17 +45,17 @@
                         </ul>
                     </li>
                     <li class="nav-item dropdown">
-                        <a id="UI" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-current="page" href="#">Porções</a>
+                        <a id="UI" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-current="page" href="../porcao/porcoes.php">Porções</a>
                         <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="#">Quentes</a></li>
-                            <li><a class="dropdown-item" href="#">Frias</a></li>
+                            <li><a class="dropdown-item" href="../porcao/porcoes.php#quente">Quentes</a></li>
+                            <li><a class="dropdown-item" href="../porcao/porcoes.php#frio">Frias</a></li>
                         </ul>
                     </li>
                     <li class="nav-item dropdown">
-                        <a id="UI" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-current="page" href="#">Bebidas</a>
+                        <a id="UI" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-current="page" href="../bebidas/bebidas.php">Bebidas</a>
                         <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="#">Alcoólicas</a></li>
-                            <li><a class="dropdown-item" href="#">Não Alcoólicas</a></li>
+                            <li><a class="dropdown-item" href="../bebidas/bebidas.php#nao">Não Alcoólicas</a></li>
+                            <li><a class="dropdown-item" href="../bebidas/bebidas.php#alcool">Alcoólicas</a></li>
                         </ul>
                     </li>
                     <li class="nav-item">

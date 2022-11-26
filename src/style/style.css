@@ -106,6 +106,25 @@ footer {
   margin-left: 2%;
 }
 
+#cadastro{
+  margin-top: 5%;
+  margin-bottom: 5%;
+}
+#top-card{
+  margin: 15%;
+  
+}
+#bg{
+  background-color: #c0c0c0;
+}
+#btnEntrar h5{
+  margin-top: auto;
+  margin-bottom: auto;
+}
+#formUlário{
+  margin-bottom: 10px;
+}
+
 #conec{
   margin: auto;
   text-align: center;

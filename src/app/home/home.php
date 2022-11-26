@@ -99,7 +99,7 @@
                         </a>
                         <div class="card-body">
                             <h5 class="card-title"></h5>
-                            <a href="#" class="btn" id="catButton">
+                            <a href="../porcao/porcoes.php#quente" class="btn" id="catButton">
                                 <p id="textoCategoria">Quentes</p>
                             </a>
                         </div>
@@ -112,7 +112,7 @@
                         </a>
                         <div class="card-body">
                             <h5 class="card-title"></h5>
-                            <a href="#" class="btn" id="catButton">
+                            <a href="../porcao/porcoes.php#frio" class="btn" id="catButton">
                                 <p id="textoCategoria">Frias</p>
                             </a>
                         </div>
@@ -126,12 +126,12 @@
                 <div class="col">
                     <div class="card" id="cardHomePage">
                         <a href="#">
-                            <img class="card-img-top" src="../../assets/img/alcolica.jpg" alt="hamburger">
+                            <img class="card-img-top" src="../../assets/img/naoalcolica.jpg" alt="hamburger">
                         </a>
                         <div class="card-body">
                             <h5 class="card-title"></h5>
-                            <a href="#" class="btn" id="catButton">
-                                <p id="textoCategoria">Alcoólicas</p>
+                            <a href="../bebidas/bebidas.php#nao" class="btn" id="catButton">
+                                <p id="textoCategoria">Não Alcoólicas</p>
                             </a>
                         </div>
                     </div>
@@ -139,12 +139,12 @@
                 <div class="col">
                     <div class="card" id="cardHomePage">
                         <a href="#">
-                            <img class="card-img-top" src="../../assets/img/naoalcolica.jpg" alt="hamburger">
+                            <img class="card-img-top" src="../../assets/img/alcolica.jpg" alt="hamburger">
                         </a>
                         <div class="card-body">
                             <h5 class="card-title"></h5>
-                            <a href="#" class="btn" id="catButton">
-                                <p id="textoCategoria">Não Alcoólicas</p>
+                            <a href="../bebidas/bebidas.php#alcool" class="btn" id="catButton">
+                                <p id="textoCategoria">Alcoólicas</p>
                             </a>
                         </div>
                     </div>

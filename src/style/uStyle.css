@@ -1,0 +1,139 @@
+@font-face {
+  font-family: Agrandir-Tight;
+  src: url('./Agrandir-Tight.ttf');
+}
+
+@font-face {
+  font-family: Agrandir-GrandLight;
+  src: url('./Agrandir-GrandLight.ttf');
+}
+@font-face {
+  font-family: Agrandir-TextBold;
+  src: url('../assets/Agrandir-TextBold.otf');
+}
+/* h1{
+    font-family:Agrandir-GrandLight;
+} */
+/* h2{
+    font-family:Agrandir-Tight;
+} */
+
+#header {
+  background: #171717;
+  color: #ff611d;
+  font-family: 'Agrandir-TextBold';
+}
+
+#menu {
+  width: 90%;
+
+}
+
+h6 {
+  color: #ff611d;
+  text-align: center;
+}
+
+
+#UI {
+  color: #ff611d;
+}
+
+#inserir {
+  margin-top: 1.5%;
+}
+
+#btnUpImg {
+  margin: 1.5%;
+}
+
+#dropdown {
+  color: #ff611d;
+  margin-right: 5%;
+}
+
+.custom-toggler .navbar-toggler-icon {
+	background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255, 97, 29)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+}
+
+.custom-toggler.navbar-toggler {
+  border-color: #ff611d;
+}
+
+#produtos {
+  margin-top: 6%;
+}
+
+#crumb{
+  text-decoration: none;
+  color: #FF611D;
+}
+
+footer {
+  color: #FF611D;
+  background-color: #171717;
+  width: 100%;
+  padding-top: .5rem;
+}
+
+#cont {
+  font-size: 12px;
+}
+
+.tx_sl {
+  font-size: 10px;
+}
+
+/* #copy{
+  margin-top: 7.5rem;
+} */
+
+#bread {
+  margin-left: 2%;
+}
+
+#cadastro {
+  margin-top: 5%;
+  margin-bottom: 5%;
+}
+
+#cartao {
+  padding: 3%;
+}
+
+#btnSalvar {
+  margin-top: 2%;
+}
+
+#campo {
+  text-align: center;
+}
+
+body {
+  background-color: #d0d0d0;
+  font-family: 'Agrandir-TextBold';
+}
+
+#btn-rag{
+  font-family: 'Agrandir-TextBold';
+  color: #ffffff;
+  background-color: #ff611d;;
+}
+.container {
+  background-color: #f0f0f0;
+  height: 100%;
+  box-shadow: 5px 5px 15px;
+  width: 85%;
+  border-radius: 10px;
+  padding-top: 1px;
+  padding-bottom: 15px;
+  margin-top: 25px;
+}
+.btn-dark{
+  color:#ff611d;
+  font-family: 'Agrandir-TextBold';
+}
+
+#bottomCard{
+  padding-bottom: 8%;
+}

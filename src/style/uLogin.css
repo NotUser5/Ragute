@@ -1,0 +1,112 @@
+@font-face {
+    font-family: Agrandir-Tight;
+    src: url('./Agrandir-Tight.ttf');
+}
+@font-face {
+    font-family: Agrandir-GrandLight;
+    src: url('./Agrandir-GrandLight.ttf');
+}
+@font-face {
+  font-family: Agrandir-TextBold;
+  src: url('./Agrandir-TextBold.otf');
+}
+
+/* h1{
+    font-family:Agrandir-GrandLight;
+} */
+/* h2{
+    font-family:Agrandir-Tight;
+} */
+
+#header{
+  background: #171717;
+  color: #ff611d;
+}
+
+#menu{
+  width: 85%;
+}
+
+h6{
+  color: #ff611d;
+  text-align: center;
+}
+
+.container {
+  background-color: #dddddd;
+  height: 100%;
+  box-shadow: 0px 0px 75px;
+  padding-top: 74px;
+}
+#top-card {
+  background-color: #f0f0f0;
+  height: fit-content;
+  box-shadow: 5px 5px 15px;
+  border-radius: 10px;
+  padding-bottom: 5px;
+  padding-top: 5px;
+  font-family: 'Agrandir-TextBold';
+}
+
+#UI{
+  color: #ff611d;
+}
+
+#dropdown{
+  color: #ff611d;
+  margin-right: 5%;
+}
+
+.custom-toggler .navbar-toggler-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255, 97, 29)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+}
+
+.custom-toggler.navbar-toggler {
+  border-color: #ff611d;
+} 
+
+#produtos{
+  margin-top: 6%;
+}
+
+footer{
+  color: #FF611D; 
+  background-color: #171717;
+  width: 100%;
+  padding-top: .5rem;
+}
+
+#cont{
+  font-size: 12px;
+}
+
+.tx_sl{
+   font-size: 10px;
+}
+
+/* #copy{
+  margin-top: 7.5rem;
+} */
+
+#bread{
+  margin-left: 2%;
+}
+
+#cadastro{
+  margin-top: 5%;
+  margin-bottom: 5%;
+}
+#top-card{
+  margin: 15%;
+  
+}
+#bg{
+  background-color: #c0c0c0;
+}
+#btnEntrar h5{
+  margin-top: auto;
+  margin-bottom: auto;
+}
+#formUlário{
+  margin-bottom: 10px;
+}
