@@ -43,7 +43,7 @@ $resultadoSelect4 = mysqli_query($conexao, $querySelect4);
                 if ($linha["ATIVO"] === '1' && $linha["ID_CATEGORIA"] === '1') {
             ?>
                     <div class="col-sm-12 col-md-6 col-lg-4 d-flex align-items-stretch">
-                        <div class="card mb-3" style="width: 18rem;">
+                        <div class="card mb-3" style="width: 520px;">
                             <img src="<?php echo $linha["IMG"] ?>" class="img-fluid rounded-start" alt="Lanche de Hamburguer">
                             <div class="card-body">
                                 <h5 class="card-title text-center"><?php echo $linha["NOME"]; ?></h5>
@@ -67,7 +67,7 @@ $resultadoSelect4 = mysqli_query($conexao, $querySelect4);
                     if ($linha2["ATIVO"] === '1' && $linha2["ID_CATEGORIA"] === '2') {
                 ?>
                         <div class="col-sm-12 col-md-6 col-lg-4 d-flex align-items-stretch">
-                            <div class="card mb-3" style="width: 18rem;">
+                            <div class="card mb-3" style="width: 520px;">
                                 <img src="<?php echo $linha2["IMG"] ?>" class="img-fluid rounded-start" alt="Lanche Natural">
                                 <div class="card-body">
                                     <h5 class="card-title text-center"><?php echo $linha2["NOME"]; ?></h5>
@@ -89,7 +89,7 @@ $resultadoSelect4 = mysqli_query($conexao, $querySelect4);
                         if ($linha3["ATIVO"] === '1' && $linha3["ID_CATEGORIA"] === '3') {
                     ?>
                             <div class="col-sm-12 col-md-6 col-lg-4 d-flex align-items-stretch">
-                                <div class="card mb-3" style="width: 18rem;">
+                                <div class="card mb-3" style="width: 520px;">
                                     <img src="<?php echo $linha3["IMG"] ?>" class="img-fluid rounded-start" alt="Lanche de Frango">
                                     <div class="card-body">
                                         <h5 class="card-title text-center"><?php echo $linha3["NOME"]; ?></h5>
@@ -111,7 +111,7 @@ $resultadoSelect4 = mysqli_query($conexao, $querySelect4);
                             if ($linha4["ATIVO"] === '1' && $linha4["ID_CATEGORIA"] === '4') {
                         ?>
                                 <div class="col-sm-12 col-md-6 col-lg-4 d-flex align-items-stretch">
-                                    <div class="card mb-3" style="width: 18rem;">
+                                    <div class="card mb-3" style="width: 520px;">
                                         <img src="<?php echo $linha4["IMG"] ?>" class="img-fluid rounded-start" alt="Hot-Dog">
                                         <div class="card-body">
                                             <h5 class="card-title text-center"><?php echo $linha4["NOME"]; ?></h5>

@@ -39,7 +39,7 @@ $resultadoSelect2 = mysqli_query($conexao, $querySelect2);
             if ($linha["ATIVO"] === '1' && $linha["ID_CATEGORIA"] === '7') {
         ?>
                 <div class="col-sm-12 col-md-6 col-lg-4 d-flex align-items-stretch">
-                    <div class="card mb-3" style="width: 18rem;">
+                    <div class="card mb-3" style="width: 520px;">
                         <img src="<?php echo $linha["IMG"] ?>" class="img-fluid rounded-start" alt="Não Alcoólicas">
                         <div class="card-body">
                             <h5 class="card-title text-center"><?php echo $linha["NOME"]; ?></h5>
@@ -63,7 +63,7 @@ $resultadoSelect2 = mysqli_query($conexao, $querySelect2);
             if ($linha2["ATIVO"] === '1' && $linha2["ID_CATEGORIA"] === '8') {
         ?>
                 <div class="col-sm-12 col-md-6 col-lg-4 d-flex align-items-stretch">
-                    <div class="card mb-3" style="width: 18rem;">
+                    <div class="card mb-3" style="width: 520px;">
                         <img src="<?php echo $linha2["IMG"] ?>" class="img-fluid rounded-start" alt="Alcoólicas">
                         <div class="card-body">
                             <h5 class="card-title text-center"><?php echo $linha2["NOME"]; ?></h5>
