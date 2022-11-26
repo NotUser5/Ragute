@@ -36,49 +36,39 @@ $resultadoSelect4 = mysqli_query($conexao, $querySelect4);
     <h2 class="text-center">Lanches</h2>
     <h3 class="p-3" id="hamburger">Hamburguer</h2>
 
-    <div class="row">
-        <?php
-        while ($linha = mysqli_fetch_array($resultadoSelect)) {
-            $linha2 = $linha;
-            if ($linha["ATIVO"] === '1' && $linha["ID_CATEGORIA"] === '1') {
-        ?>
-                <div class="col-sm-12 col-md-6 col-lg-4">
-                    <div class="card mb-3" style="max-width: 540px;">
-                        <div class="row">
-                            <div class="col-sm-12 col-md-6 ">
-                                <img src="<?php echo $linha["IMG"] ?>" class="img-fluid rounded-start" alt="Lanche de Hamburguer">
-                            </div>
-                            <div class="col-sm-11 col-md-5">
-                                <div class="card-body">
-                                    <h5 class="card-title text-center"><?php echo $linha["NOME"]; ?></h5>
-                                    <p class="card-text text-center"><?php echo $linha["INGREDIENTES"]; ?></p>
-                                    <h6 class="card-title text-center">R$<?php echo $linha["VALOR"] ?></h6>
-                                </div>
+        <div class="row">
+            <?php
+            while ($linha = mysqli_fetch_array($resultadoSelect)) {
+                $linha2 = $linha;
+                if ($linha["ATIVO"] === '1' && $linha["ID_CATEGORIA"] === '1') {
+            ?>
+                    <div class="col-sm-12 col-md-6 col-lg-4 d-flex align-items-stretch">
+                        <div class="card mb-3" style="width: 18rem;">
+                            <img src="<?php echo $linha["IMG"] ?>" class="img-fluid rounded-start" alt="Lanche de Hamburguer">
+                            <div class="card-body">
+                                <h5 class="card-title text-center"><?php echo $linha["NOME"]; ?></h5>
+                                <p class="card-text text-center"><?php echo $linha["INGREDIENTES"]; ?></p>
+                                <h6 class="card-title text-center">R$<?php echo $linha["VALOR"] ?></h6>
                             </div>
                         </div>
                     </div>
-                </div>
-        <?php
+            <?php
+                }
             }
-        }
-        ?>
-    </div>
+            ?>
+        </div>
 
-    <h3 class="p-3" id="naturais">Naturais</h2>
+        <h3 class="p-3" id="naturais">Naturais</h2>
 
-    <div class="row">
-        <?php
+            <div class="row">
+                <?php
 
-        while ($linha2 = mysqli_fetch_array($resultadoSelect2)) {
-            if ($linha2["ATIVO"] === '1' && $linha2["ID_CATEGORIA"] === '2') {
-        ?>
-                <div class="col-sm-12 col-md-6 col-lg-4">
-                    <div class="card mb-3" style="max-width: 540px;">
-                        <div class="row">
-                            <div class="col-sm-12 col-md-6 ">
+                while ($linha2 = mysqli_fetch_array($resultadoSelect2)) {
+                    if ($linha2["ATIVO"] === '1' && $linha2["ID_CATEGORIA"] === '2') {
+                ?>
+                        <div class="col-sm-12 col-md-6 col-lg-4 d-flex align-items-stretch">
+                            <div class="card mb-3" style="width: 18rem;">
                                 <img src="<?php echo $linha2["IMG"] ?>" class="img-fluid rounded-start" alt="Lanche Natural">
-                            </div>
-                            <div class="col-sm-11 col-md-5">
                                 <div class="card-body">
                                     <h5 class="card-title text-center"><?php echo $linha2["NOME"]; ?></h5>
                                     <p class="card-text text-center"><?php echo $linha2["INGREDIENTES"]; ?></p>
@@ -86,69 +76,56 @@ $resultadoSelect4 = mysqli_query($conexao, $querySelect4);
                                 </div>
                             </div>
                         </div>
-                    </div>
-                </div>
-        <?php
-            }
-        }
-       ?>
-    </div>
-    <h3 class="p-3" id="frango">Frango</h2>
+                <?php
+                    }
+                }
+                ?>
+            </div>
+            <h3 class="p-3" id="frango">Frango</h2>
 
-    <div class="row">
-        <?php
-        while ($linha3 = mysqli_fetch_array($resultadoSelect3)) {
-            if ($linha3["ATIVO"] === '1' && $linha3["ID_CATEGORIA"] === '3') {
-        ?>
-                <div class="col-sm-12 col-md-6 col-lg-4">
-                    <div class="card mb-3" style="max-width: 540px;">
-                        <div class="row">
-                            <div class="col-sm-12 col-md-6 ">
-                                <img src="<?php echo $linha3["IMG"] ?>" class="img-fluid rounded-start" alt="Lanche de Frango">
-                            </div>
-                            <div class="col-sm-11 col-md-5">
-                                <div class="card-body">
-                                    <h5 class="card-title text-center"><?php echo $linha3["NOME"]; ?></h5>
-                                    <p class="card-text text-center"><?php echo $linha3["INGREDIENTES"]; ?></p>
-                                    <h6 class="card-title text-center">R$<?php echo $linha3["VALOR"] ?></h6>
+                <div class="row">
+                    <?php
+                    while ($linha3 = mysqli_fetch_array($resultadoSelect3)) {
+                        if ($linha3["ATIVO"] === '1' && $linha3["ID_CATEGORIA"] === '3') {
+                    ?>
+                            <div class="col-sm-12 col-md-6 col-lg-4 d-flex align-items-stretch">
+                                <div class="card mb-3" style="width: 18rem;">
+                                    <img src="<?php echo $linha3["IMG"] ?>" class="img-fluid rounded-start" alt="Lanche de Frango">
+                                    <div class="card-body">
+                                        <h5 class="card-title text-center"><?php echo $linha3["NOME"]; ?></h5>
+                                        <p class="card-text text-center"><?php echo $linha3["INGREDIENTES"]; ?></p>
+                                        <h6 class="card-title text-center">R$<?php echo $linha3["VALOR"] ?></h6>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                    </div>
+                    <?php
+                        }
+                    }
+                    ?>
                 </div>
-        <?php
-            }
-        }
-        ?>
-    </div>
-    <h3 class="p-3" id="hotdog">Hot-Dogs</h2>
+                <h3 class="p-3" id="hotdog">Hot-Dogs</h2>
 
-    <div class="row">
-        <?php
-        while ($linha4 = mysqli_fetch_array($resultadoSelect4)) {
-            if ($linha4["ATIVO"] === '1' && $linha4["ID_CATEGORIA"] === '4') {
-        ?>
-                <div class="col-sm-12 col-md-6 col-lg-4">
-                    <div class="card mb-3" style="max-width: 540px;">
-                        <div class="row">
-                            <div class="col-sm-12 col-md-6 ">
-                                <img src="<?php echo $linha4["IMG"] ?>" class="img-fluid rounded-start" alt="Hot-Dog">
-                            </div>
-                            <div class="col-sm-11 col-md-5">
-                                <div class="card-body">
-                                    <h5 class="card-title text-center"><?php echo $linha4["NOME"]; ?></h5>
-                                    <p class="card-text text-center"><?php echo $linha4["INGREDIENTES"]; ?></p>
-                                    <h6 class="card-title text-center">R$<?php echo $linha4["VALOR"] ?></h6>
+                    <div class="row">
+                        <?php
+                        while ($linha4 = mysqli_fetch_array($resultadoSelect4)) {
+                            if ($linha4["ATIVO"] === '1' && $linha4["ID_CATEGORIA"] === '4') {
+                        ?>
+                                <div class="col-sm-12 col-md-6 col-lg-4 d-flex align-items-stretch">
+                                    <div class="card mb-3" style="width: 18rem;">
+                                        <img src="<?php echo $linha4["IMG"] ?>" class="img-fluid rounded-start" alt="Hot-Dog">
+                                        <div class="card-body">
+                                            <h5 class="card-title text-center"><?php echo $linha4["NOME"]; ?></h5>
+                                            <p class="card-text text-center"><?php echo $linha4["INGREDIENTES"]; ?></p>
+                                            <h6 class="card-title text-center">R$<?php echo $linha4["VALOR"] ?></h6>
+                                        </div>
+                                    </div>
                                 </div>
-                            </div>
-                        </div>
+
+                        <?php
+                            }
+                        }
+                        ?>
                     </div>
-                </div>
-        <?php
-            }
-        }
-        ?>
-    </div>
 
 </div>
 

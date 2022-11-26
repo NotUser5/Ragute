@@ -41,7 +41,7 @@
     <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4">
         <div class="col">
             <div class="card" id="cardHomePage">
-                <a href="#">
+                <a href="../lanches/lanches.php#hamburger">
                     <img class="card-img-top" src="../../assets/img/hamburguer.jpg" alt="hamburger">
                 </a>
                 <div class="card-body">
@@ -54,7 +54,7 @@
         </div>
         <div class="col">
             <div class="card" id="cardHomePage">
-                <a href="#">
+                <a href="../lanches/lanches.php#naturais">
                     <img class="card-img-top" src="../../assets/img/natural.jpg" alt="Natural">
                 </a>
                 <div class="card-body">
@@ -67,7 +67,7 @@
         </div>
         <div class="col">
             <div class="card" id="cardHomePage">
-                <a href="#">
+                <a href="../lanches/lanches.php#frango">
                     <img class="card-img-top" src="../../assets/img/frango.jpg" alt="Frango">
                 </a>
                 <div class="card-body">
@@ -80,7 +80,7 @@
         </div>
         <div class="col">
             <div class="card" id="cardHomePage">
-                <a href="#">
+                <a href="../lanches/lanches.php#hotdog">
                     <img class="card-img-top" src="../../assets/img/hotdog.jpg" alt="Hot-Dog">
                 </a>
                 <div class="card-body">
@@ -98,7 +98,7 @@
             <div class="row row-cols-1 row-cols-md-1 row-cols-lg-2">
                 <div class="col">
                     <div class="card" id="cardHomePage">
-                        <a href="#">
+                        <a href="../porcao/porcoes.php#quente">
                             <img class="card-img-top" src="../../assets/img/quente.jpg" alt="hamburger">
                         </a>
                         <div class="card-body">
@@ -111,7 +111,7 @@
                 </div>
                 <div class="col">
                     <div class="card" id="cardHomePage">
-                        <a href="#">
+                        <a href="../porcao/porcoes.php#frio">
                             <img class="card-img-top" src="../../assets/img/fria.png" alt="hamburger">
                         </a>
                         <div class="card-body">
@@ -129,7 +129,7 @@
             <div class="row row-cols-1 row-cols-md-1 row-cols-lg-2">
                 <div class="col">
                     <div class="card" id="cardHomePage">
-                        <a href="#">
+                        <a href="../bebidas/bebidas.php#nao">
                             <img class="card-img-top" src="../../assets/img/naoalcolica.jpg" alt="hamburger">
                         </a>
                         <div class="card-body">
@@ -142,7 +142,7 @@
                 </div>
                 <div class="col">
                     <div class="card" id="cardHomePage">
-                        <a href="#">
+                        <a href="../bebidas/bebidas.php#alcool">
                             <img class="card-img-top" src="../../assets/img/alcolica.jpg" alt="hamburger">
                         </a>
                         <div class="card-body">

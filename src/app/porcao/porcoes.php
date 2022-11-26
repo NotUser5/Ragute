@@ -38,19 +38,13 @@ $resultadoSelect2 = mysqli_query($conexao, $querySelect2);
             $linha2 = $linha;
             if ($linha["ATIVO"] === '1' && $linha["ID_CATEGORIA"] === '5') {
         ?>
-                <div class="col-sm-12 col-md-6 col-lg-4">
-                    <div class="card mb-3" style="max-width: 540px;">
-                        <div class="row">
-                            <div class="col-sm-12 col-md-6 ">
-                                <img src="<?php echo $linha["IMG"] ?>" class="img-fluid rounded-start" alt="Porção Quente">
-                            </div>
-                            <div class="col-sm-11 col-md-5">
-                                <div class="card-body">
-                                    <h5 class="card-title text-center"><?php echo $linha["NOME"]; ?></h5>
-                                    <p class="card-text text-center"><?php echo $linha["INGREDIENTES"]; ?></p>
-                                    <h6 class="card-title text-center">R$<?php echo $linha["VALOR"] ?></h6>
-                                </div>
-                            </div>
+                <div class="col-sm-12 col-md-6 col-lg-4 d-flex align-items-stretch">
+                    <div class="card mb-3" style="width: 18rem;">
+                        <img src="<?php echo $linha["IMG"] ?>" class="img-fluid rounded-start" alt="Porção Quente">
+                        <div class="card-body">
+                            <h5 class="card-title text-center"><?php echo $linha["NOME"]; ?></h5>
+                            <p class="card-text text-center"><?php echo $linha["INGREDIENTES"]; ?></p>
+                            <h6 class="card-title text-center">R$<?php echo $linha["VALOR"] ?></h6>
                         </div>
                     </div>
                 </div>
@@ -67,27 +61,22 @@ $resultadoSelect2 = mysqli_query($conexao, $querySelect2);
 
         while ($linha2 = mysqli_fetch_array($resultadoSelect2)) {
             if ($linha2["ATIVO"] === '1' && $linha2["ID_CATEGORIA"] === '6') {
+
         ?>
-                <div class="col-sm-12 col-md-6 col-lg-4">
-                    <div class="card mb-3" style="max-width: 540px;">
-                        <div class="row">
-                            <div class="col-sm-12 col-md-6 ">
-                                <img src="<?php echo $linha2["IMG"] ?>" class="img-fluid rounded-start" alt="Porção Fria">
-                            </div>
-                            <div class="col-sm-11 col-md-5">
-                                <div class="card-body">
-                                    <h5 class="card-title text-center"><?php echo $linha2["NOME"]; ?></h5>
-                                    <p class="card-text text-center"><?php echo $linha2["INGREDIENTES"]; ?></p>
-                                    <h6 class="card-title text-center">R$<?php echo $linha2["VALOR"] ?></h6>
-                                </div>
-                            </div>
+                <div class="col-sm-12 col-md-6 col-lg-4 d-flex align-items-stretch">
+                    <div class="card mb-3" style="width: 18rem;">
+                        <img src="<?php echo $linha2["IMG"] ?>" class="img-fluid rounded-start" alt="Porção Fria">
+                        <div class="card-body">
+                            <h5 class="card-title text-center"><?php echo $linha2["NOME"]; ?></h5>
+                            <p class="card-text text-center"><?php echo $linha2["INGREDIENTES"]; ?></p>
+                            <h6 class="card-title text-center">R$<?php echo $linha2["VALOR"] ?></h6>
                         </div>
                     </div>
                 </div>
         <?php
             }
         }
-       ?>
+        ?>
     </div>
 
 </div>

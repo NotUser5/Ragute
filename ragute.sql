@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 26-Nov-2022 às 05:45
+-- Tempo de geração: 26-Nov-2022 às 21:55
 -- Versão do servidor: 10.4.25-MariaDB
 -- versão do PHP: 8.1.10
 
@@ -49,48 +49,6 @@ INSERT INTO `categoria` (`ID`, `NOME`) VALUES
 -- --------------------------------------------------------
 
 --
--- Estrutura da tabela `contem`
---
-
-CREATE TABLE `contem` (
-  `ID` int(11) NOT NULL,
-  `ID_PRODUTOS` int(11) NOT NULL,
-  `ID_INGREDIENTES` int(11) NOT NULL,
-  `QUANTIDADE` int(10) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
--- --------------------------------------------------------
-
---
--- Estrutura da tabela `ingredientes`
---
-
-CREATE TABLE `ingredientes` (
-  `ID` int(11) NOT NULL,
-  `INGREDIENTE` varchar(30) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
---
--- Extraindo dados da tabela `ingredientes`
---
-
-INSERT INTO `ingredientes` (`ID`, `INGREDIENTE`) VALUES
-(1, 'Hamburguer'),
-(2, 'Alface'),
-(3, 'Tomate'),
-(4, 'Ovo'),
-(5, 'Queijo'),
-(6, 'Presunto'),
-(7, 'Catupiry'),
-(8, 'Bacon'),
-(9, 'Cheddar'),
-(10, 'Filé de Frango'),
-(11, 'Hamburguer Caseiro'),
-(12, 'Salsicha');
-
--- --------------------------------------------------------
-
---
 -- Estrutura da tabela `produtos`
 --
 
@@ -113,8 +71,8 @@ INSERT INTO `produtos` (`ID`, `NOME`, `VALOR`, `INGREDIENTES`, `ATIVO`, `IMG`, `
 (7, '16mm', 19.99, 'Pão Brioche \r\n2x burgers 160g Angus\r\nCatupiry\r\nBacon\r\nMaiô Up.', 1, '../../assets/img/202201262236_3stj_p.png', 1),
 (8, 'Classic Egg', 31.99, 'Pão Brioche \r\nBurger 160g  Angus \r\nAmerican Cheese Cheddar\r\nOvo gema dura\r\nBacon\r\nMaiô Up', 1, '../../assets/img/202201262227_IA1I_p.png', 1),
 (9, 'Cremosinho', 32.99, 'Pão brioche \r\n3x Smash de 80g Angus\r\nCatupiry\r\nBacon crocante ', 1, '../../assets/img/202201262256_GiKD_p.png', 1),
-(10, 'Duo Smash', 19.99, 'Pão brioche\r\n2x smash 80g 100% Angus\r\nAmerican Cheese Cheddar\r\nBacon crocante \r\nMaiô Up', 1, '../../assets/img/202201270955_2F4j_p.png', 1),
-(11, 'Futuro Burger [Vegetariano]', 15.99, 'Pãozinho Brioche\r\nBurger 115g [pura suculência]\r\nQueijo American Cheese\r\nAlface & Tomate\r\nMaiô Up', 1, '../../assets/img/202201262125_V4LU_p.png', 1),
+(10, 'Duo Smash', 19.99, 'Pão brioche\r\n2x smash 80g\r\nAmerican Cheese Cheddar\r\nBacon crocante \r\nMaiô Up', 1, '../../assets/img/202201270955_2F4j_p.png', 1),
+(11, 'Futuro Burger [Vegetariano]', 15.99, 'Pãozinho Brioche\r\nBurger 115g \r\nQueijo American Cheese\r\nAlface & Tomate\r\nMaiô Up', 1, '../../assets/img/202201262125_V4LU_p.png', 1),
 (12, 'Malvadao', 29.99, 'Pão brioche\r\nBurger 160g Angus\r\ncheddar cremoso \r\nFarofa de bacon\r\nBatata fritas\r\nMaiô Up', 1, '../../assets/img/202201271006_PlLV_p.png', 1),
 (13, 'Miami', 29.99, 'Pão brioche\r\n2x Smash 80g\r\nQueijo cheddar\r\nBacon crocante\r\nCebola branca picadinha\r\nMolho Miami-levemente apimentado', 1, '../../assets/img/202201271951_4Mrm_p.png', 1),
 (14, 'Original', 24.99, 'Pão Brioche\r\nBurger 160g 100% Angus \r\nQueijo Prato\r\nAlface & Tomate\r\nMaiô Up.', 1, '../../assets/img/202201262158_cu1Z_p.png', 1),
@@ -208,20 +166,6 @@ ALTER TABLE `categoria`
   ADD PRIMARY KEY (`ID`);
 
 --
--- Índices para tabela `contem`
---
-ALTER TABLE `contem`
-  ADD PRIMARY KEY (`ID`),
-  ADD KEY `FK_CONTEM_PRODUTOS` (`ID_PRODUTOS`),
-  ADD KEY `FK_CONTEM_INGREDIENTES` (`ID_INGREDIENTES`);
-
---
--- Índices para tabela `ingredientes`
---
-ALTER TABLE `ingredientes`
-  ADD PRIMARY KEY (`ID`);
-
---
 -- Índices para tabela `produtos`
 --
 ALTER TABLE `produtos`
@@ -245,18 +189,6 @@ ALTER TABLE `categoria`
   MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
--- AUTO_INCREMENT de tabela `contem`
---
-ALTER TABLE `contem`
-  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT;
-
---
--- AUTO_INCREMENT de tabela `ingredientes`
---
-ALTER TABLE `ingredientes`
-  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
-
---
 -- AUTO_INCREMENT de tabela `produtos`
 --
 ALTER TABLE `produtos`
@@ -271,13 +203,6 @@ ALTER TABLE `usuarios`
 --
 -- Restrições para despejos de tabelas
 --
-
---
--- Limitadores para a tabela `contem`
---
-ALTER TABLE `contem`
-  ADD CONSTRAINT `FK_CONTEM_INGREDIENTES` FOREIGN KEY (`ID_INGREDIENTES`) REFERENCES `ingredientes` (`ID`),
-  ADD CONSTRAINT `FK_CONTEM_PRODUTOS` FOREIGN KEY (`ID_PRODUTOS`) REFERENCES `produtos` (`ID`);
 
 --
 -- Limitadores para a tabela `produtos`
