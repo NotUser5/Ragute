@@ -174,7 +174,7 @@ footer {
   h1 { font-size: 26px; }
   h2 { font-size: 22px; }
   hr { margin: 30px 0; }
-  #back-to-top-btn { font-size: 18px; width: 32px; height: 32px; bottom: 6px; right: 6px; }
+  #back-to-top-btn { font-size: 18px; bottom: 6px; right: 6px; }
 }
 
 /* Animations */
