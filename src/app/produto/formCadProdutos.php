@@ -88,7 +88,7 @@ if (isset($_POST) && !empty($_POST)) {
                         <label>
                             <h6 class="card-subtitle mb-2 text-muted">Valor</h6>
                         </label>
-                        <input type="number" name="valor" class="form-control" placeholder="R$10,00" min="0" max="150" step=".01" required/>
+                        <input type="number" name="valor" class="form-control" placeholder="R$" min="0" max="150" step=".01" required/>
                     </div>
 
                     <div class="input-group" id="inserir">
