@@ -9,8 +9,6 @@
             <div class="col-md-1 col-sm-12"></div>
             <div class="col-md-3 col-sm-12 text-center">
                 <img src="../../assets/img/RaguteFooter.png" alt="Bootstrap" width="120px" height="120px">
-
-
             </div>
             <div class="col-md-4 col-sm-12 text-center ">
                 <p id="tato">Contato<br>
